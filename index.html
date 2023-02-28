@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>IIuviGrader</title>
+    <link rel="stylesheet" href="app.css">
+    <link rel="shortcut icon" type="image/png" href="logo.png"/>
+    <script src="app.js"></script>
+    <style>
+		body {
+			margin: 0;
+			padding: 0;
+			background-size: cover;
+		}
+		
+		.section {
+			height: 100vh;
+			background-image: url("section-1.gif");
+            background-size: cover;
+
+		}
+		
+		.section:nth-child(2) {
+			background-image: url("section-2.gif");
+		}
+		
+		.section:nth-child(3) {
+			background-image: url("section-3.gif");
+        }
+        .section:nth-child(4) {
+			background-image: url("section-4.gif");
+		}
+		
+		.section-content {
+			display: flex;
+			align-items: center;
+			justify-content: center;
+			height: 100%;
+			text-align: center;
+		}
+    </style>
+
+</head>
+<body>
+    <header>
+      <nav>
+        <ul class="nav-list">
+          <div class="logo-container">
+            <img src="logo.png" alt="IIuviGrader Logo">
+          </div>
+          <li class="nav-item">
+            <a href="grading.html" class="nav-link">Deck Grader</a>
+          </li>
+          <li class="nav-item">
+            <a href="#about" class="nav-link">About</a>
+          </li>
+          <li class="nav-item">
+            <a href="#contact" class="nav-link">Contact</a>
+          </li>
+        </ul>
+      </nav>
+        <section class="introduction">
+            <div class="container">
+              <h2>Welcome to IIuviGrader</h2>
+              <p>The Ultimate Resource for Evaluating Your Illuvium Decks</p>
+              <p>Our website provides you with the tools and resources you need to grade and improve your deck building skills. Whether you're a beginner or a seasoned player, our grading system and tips will help you take your game to the next level.</p>
+            </div>
+          </section>
+
+      </header>
+	<div class="section">
+		<div class="section-content">
+			<section class="about" id="about">
+                <div class="container">
+                  <h2>About IIuviGrader</h2>
+                  <p>Deck Grading is the ultimate resource for deck builders and players looking to improve their skills. Our website provides you with the tools and resources you need to evaluate and improve your decks, including our grading system, tips, and tutorials.</p>
+                  <p>Whether you're a beginner or a seasoned player, our platform is designed to help you take your game to the next level. With our comprehensive grading system, you'll be able to receive an objective evaluation of your deck, and receive tips and advice on how to improve it.</p>
+                  <a href="#grading-form" class="cta">Want To Start Grading</a>
+                </div>
+              </section>
+              
+		</div>
+	</div>
+	<div class="section">
+		<div class="section-content">
+			<section class="grading-system">
+                <div class="container">
+                  <h2>Grading System</h2>
+                  <p>Our grading system is designed to provide an objective evaluation of your deck. It takes into account factors such as card balance, synergy, and consistency, and provides you with a score based on those factors.</p>
+                  <p>In addition to the score, you'll also receive tips and advice on how to improve your deck, making it stronger and more competitive. Our grading system is constantly being updated and improved to provide you with the best and most accurate evaluations possible.</p>
+                </div>
+              </section>
+		</div>
+	</div>
+	
+	<div class="section">
+		<div class="section-content">
+			<section class="grading-form" id="grading-form">
+                <div class="container">
+                  <h2>Deck Grader</h2>
+                  <p>Ready to have your deck evaluated? Simply click the button below to be taken to the grading page.</p>
+                  <a href="grading.html" class="cta">Start Grading</a>
+                </div>
+              </section>              
+		</div>
+    </div>
+    <div class="section">
+		<div class="section-content">
+            <section class="contact" id="contact">
+                <div class="container">
+                  <h2>Contact and Support</h2>
+                  <p>If you have any questions or have any ideas on how to make the site better, please don't hesitate to contact us. Our team is always here to help and provide support.</p>
+                  <!-- Contact form or support information goes here -->
+                  <button id="contact-us-button" class="cupertino-button" onclick="openEmail()">Contact Us</button>
+                </div>
+              </section>
+              
+		</div>
+	</div>
+</body>
+</html>
