@@ -30,25 +30,25 @@
                 <div class="filter-bar">
                   <div class="filter-section-affinity">
                     <label>Affinity:</label>
-                    <button class ='filter-button' onclick="" id='nature'><img src="illuvium-Affinities/Nature.png"></button>
-                    <button class ='filter-button' onclick="" id="fire"><img src="illuvium-Affinities/Fire.png"></button>
-                    <button class ='filter-button' onclick="" id="earth"><img src="illuvium-Affinities/Earth.png"></button>
-                    <button class ='filter-button' onclick="" id="water"><img src="illuvium-Affinities/Water.png"></button>
-                    <button class ='filter-button' onclick="" id="air"><img src="illuvium-Affinities/Air.png"></button>
+                    <button class ='filter-button' onclick="handleFilterButtonClick(event)" id='nature'><img src="illuvium-Affinities/Nature.png"></button>
+                    <button class ='filter-button' onclick="handleFilterButtonClick(event)" id="fire"><img src="illuvium-Affinities/Fire.png"></button>
+                    <button class ='filter-button' onclick="handleFilterButtonClick(event)" id="earth"><img src="illuvium-Affinities/Earth.png"></button>
+                    <button class ='filter-button' onclick="handleFilterButtonClick(event)" id="water"><img src="illuvium-Affinities/Water.png"></button>
+                    <button class ='filter-button' onclick="handleFilterButtonClick(event)" id="air"><img src="illuvium-Affinities/Air.png"></button>
                   </div>
                   <div class="filter-section-class">
                     <label>Class:</label>
-                    <button class ='filter-button' onclick="" id="bulwark"><img src="illuvium-Classes/Bulwark.png"></button>
-                    <button class ='filter-button' onclick="" id="empath"><img src="illuvium-Classes/Empath.png"></button>
-                    <button class ='filter-button' onclick="" id="fighter"><img src="illuvium-Classes/Fighter.png"></button>
-                    <button class ='filter-button' onclick="" id="psion"><img src="illuvium-Classes/Psion.png"></button>
-                    <button class ='filter-button' onclick="" id="rogue"><img src="illuvium-Classes/Rogue.png"></button>
+                    <button class ='filter-button' onclick="handleFilterButtonClick(event)" id="bulwark"><img src="illuvium-Classes/Bulwark.png"></button>
+                    <button class ='filter-button' onclick="handleFilterButtonClick(event)" id="empath"><img src="illuvium-Classes/Empath.png"></button>
+                    <button class ='filter-button' onclick="handleFilterButtonClick(event)" id="fighter"><img src="illuvium-Classes/Fighter.png"></button>
+                    <button class ='filter-button' onclick="handleFilterButtonClick(event)" id="psion"><img src="illuvium-Classes/Psion.png"></button>
+                    <button class ='filter-button' onclick="handleFilterButtonClick(event)" id="rogue"><img src="illuvium-Classes/Rogue.png"></button>
                   </div>
                   <div class="filter-section-tier">
                     <label>Tier:</label>
-                    <button class ='filter-button' onclick="" id="one"><img src="illuvium-Stages/Stage1.png"></button>
-                    <button class ='filter-button' onclick="" id="two"><img src="illuvium-Stages/Stage2.png"></button>
-                    <button class ='filter-button' onclick="" id="three"><img src="illuvium-Stages/Stage3.png"></button>
+                    <button class ='filter-button' onclick="handleFilterButtonClick(event)" id="one"><img src="illuvium-Stages/Stage1.png"></button>
+                    <button class ='filter-button' onclick="handleFilterButtonClick(event)" id="two"><img src="illuvium-Stages/Stage2.png"></button>
+                    <button class ='filter-button' onclick="handleFilterButtonClick(event)" id="three"><img src="illuvium-Stages/Stage3.png"></button>
                   </div>
                   <div class="filter-section-search">
                     <label>Search:</label>
@@ -58,7 +58,6 @@
                 <div class= "selected-filters" id="filter-section">
                   <button id="clear-button">Clear Filters</button>
                 </div>
-                  <script src="grading.js"></script>
                   <div class="card-grid">
                     <div class="card" data-src="illuvial-card-img/Atlas.png" data-illuvial="atlas" data-affinity="water" data-tier="one" data-class="bulwark" onclick="addCardToDeckPreview(this)">
                       <img src="illuvial-card-img/Atlas.png">
@@ -217,6 +216,7 @@
                   <!-- Add the weaknesses of the deck here -->
                 </ul>
             </section> 
+            <script src="grading.js"></script>
     </div>
   </body>
 </html>
