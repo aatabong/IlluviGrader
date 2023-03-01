@@ -32,35 +32,3 @@ function addCardToDeckPreview() {
     selectedCardDiv.remove();
   });
 }
-
-const filterButtons = document.querySelectorAll('.filter-button');
-
-filterButtons.forEach(button => {
-  button.addEventListener('click', () => {
-    const imageSrc = button.querySelector('img').getAttribute('src');
-    addFilterImage(imageSrc);
-  });
-});
-
-function addFilterImage(src) {
-  // Get the selected filter element
-  let selectedFilter = document.querySelector('#selected-filter .filter-image');
-
-  // Check if the selected filter element exists
-  if (!selectedFilter) {
-    console.error('Selected filter element not found');
-    return;
-  }
-
-  // Create a new image element and set its source
-  let filterImage = document.createElement('img');
-  filterImage.src = src;
-
-  // Remove any existing filter images from the selected filter element
-  while (selectedFilter.firstChild) {
-    selectedFilter.removeChild(selectedFilter.firstChild);
-  }
-
-  // Append the new filter image to the selected filter element
-  selectedFilter.appendChild(filterImage);
-}
