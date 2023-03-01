@@ -1,3 +1,4 @@
+
 function addCardToDeckPreview() {
   const selectedCardsDiv = document.querySelector('.selected-cards');
   const card = event.target.closest('.card');
@@ -32,5 +33,19 @@ function addCardToDeckPreview() {
   });
 }
 
+const filterButtons = document.querySelectorAll('.filter-button');
 
+filterButtons.forEach(button => {
+  button.addEventListener('click', () => {
+    const imageSrc = button.querySelector('img').getAttribute('src');
+    addFilterImage(imageSrc);
+  });
+});
 
+function addFilterImage(src) {
+  const selectedFilter = document.getElementById('selected-filter');
+  const filterImage = document.createElement('img');
+  filterImage.setAttribute('src', src);
+  filterImage.classList.add('filter-image');
+  selectedFilter.appendChild(filterImage);
+}
