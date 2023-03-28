@@ -86,26 +86,118 @@ filterButtons.forEach(button => {
 
 const affinityChart = {
   Fire: {
-    strong: { Verdant: 4, Spore: 3, Wildfire: 2, Nature: 2, Tempest: 2, Air: 1, Shock: 1, Toxic: 1 },
-    weak: { Granite: -4, Mud: -3, Earth: -2, Magma: -2, Tsunami: -2, Dust: -1, Water: -1, Steam: -1 },
+    strong: {
+      Verdant: 4,
+      Spore: 3,
+      Wildfire: 2,
+      Nature: 2,
+      Tempest: 2,
+      Air: 1,
+      Shock: 1,
+      Toxic: 1,
+    },
+    weak: {
+      Granite: -4,
+      Mud: -3,
+      Earth: -2,
+      Magma: -2,
+      Tsunami: -2,
+      Dust: -1,
+      Water: -1,
+      Steam: -1,
+    },
   },
   Nature: {
-    strong: { Tempest: 4, Frost: 3, Spore: 2, Air: 2, Tsunami: 2, Dust: 1, Water: 1, Toxic: 1 },
-    weak: { Inferno: -4, Magma: -3, Wildfire: -2, Fire: -2, Granite: -2, Bloom: -1, Earth: -1, Steam: -1 },
-  },
-  Air: {
-    strong: { Tsunami: 4, Mud: 3, Frost: 2, Water: 2, Granite: 2, Steam: 1, Earth: 1, Dust: 1 },
-    weak: { Verdant: -4, Wildfire: -3, Inferno: -2, Nature: -2, Spore: -2, Shock: -1, Fire: -1, Bloom: -1 },
-  },
-  Water: {
-    strong: { Granite: 4, Magma: 3, Inferno: 2, Earth: 2, Mud: 2, Bloom: 1, Fire: 1, Steam: 1 },
-    weak: { Tempest: -4, Spore: -3, Verdant: -2, Air: -2, Frost: -2, Toxic: -1, Nature: -1, Shock: -1 },
-  },
-  Earth: {
-    strong: { Inferno: 4, Wildfire: 3, Verdant: 2, Fire: 2, Magma: 2, Shock: 1, Nature: 1, Bloom: 1 },
-    weak: { Tsunami: -4, Frost: -3, Water: -2, Mud: -2, Tempest: -2, Dust: -1, Air: -1, Toxic: -1 },
-  },
-};
+    strong: {
+      Tempest: 4,
+      Frost: 3,
+      Spore: 2,
+      Air: 2,
+      Tsunami: 2,
+      Dust: 1,
+      Water: 1,
+      Toxic: 1,
+    },
+    weak: {
+      Inferno: -4,
+      Magma: -3,
+      Wildfire: -2,
+      Fire: -2,
+      Granite: -2,
+      Bloom: -1,
+      Earth: -1,
+      Steam: -1,
+    },
+ 
+    Air: {
+      strong: {
+        Tsunami: 4,
+        Mud: 3,
+        Frost: 2,
+        Water: 2,
+        Granite: 2,
+        Steam: 1,
+        Earth: 1,
+        Dust: 1,
+      },
+      weak: {
+        Verdant: -4,
+        Wildfire: -3,
+        Inferno: -2,
+        Nature: -2,
+        Spore: -2,
+        Shock: -1,
+        Fire: -1,
+        Bloom: -1,
+      },
+    },
+    Water: {
+      strong: {
+        Granite: 4,
+        Magma: 3,
+        Inferno: 2,
+        Earth: 2,
+        Mud: 2,
+        Bloom: 1,
+        Fire: 1,
+        Steam: 1,
+      },
+      weak: {
+        Tempest: -4,
+        Spore: -3,
+        Verdant: -2,
+        Air: -2,
+        Frost: -2,
+        Toxic: -1,
+        Nature: -1,
+        Shock: -1,
+      },
+    },
+    Earth: {
+      strong: {
+        Inferno: 4,
+        Wildfire: 3,
+        Verdant: 2,
+        Fire: 2,
+        Magma: 2,
+        Shock: 1,
+        Nature: 1,
+        Bloom: 1,
+      },
+      weak: {
+        Tsunami: -4,
+        Frost: -3,
+        Water: -2,
+        Mud: -2,
+        Tempest: -2,
+        Dust: -1,
+        Air: -1,
+        Toxic: -1,
+      },
+    },
+  }}
+  
+  
 
 function gradeDeck() {
   const selectedCards = document.querySelector('.selected-cards');
