@@ -195,6 +195,156 @@ const affinityChart = {
         toxic: -1,
       },
     },
+    verdant: {
+      strong: {
+        air: 4,
+        water: 2,
+      },
+      weak: {
+        fire: -4,
+        earth: -2,
+      },
+    },
+    spore: {
+      strong: {
+        air: 2,
+        water: 3,
+      },
+      weak: {
+        fire: -3,
+        nature: -2,
+      },
+    },
+    wildfire: {
+      strong: {
+        nature: 2,
+        air: 3,
+      },
+      weak: {
+        fire: -2,
+        earth: -3,
+      },
+    },
+    tempest: {
+      strong: {
+        water: 4,
+        earth: 2,
+      },
+      weak: {
+        fire: -2,
+        nature: -4,
+      },
+    },
+    shock: {
+      strong: {
+        air: 1,
+        water: 1,
+      },
+      weak: {
+        fire: -1,
+        earth: -1,
+      },
+    },
+    toxic: {
+      strong: {
+        water: 1,
+        earth: 1,
+      },
+      weak: {
+        fire: -1,
+        nature: -1,
+      },
+    },
+    mud: {
+      strong: {
+        fire: 3,
+        earth: 2,
+      },
+      weak: {
+        air: -3,
+        water: -2,
+      },
+    },
+    magma: {
+      strong: {
+        fire: 2,
+        nature: 3,
+      },
+      weak: {
+        water: -3,
+        earth: -2,
+      },
+    },
+    tsunami: {
+      strong: {
+        fire: 2,
+        earth: 4,
+      },
+      weak: {
+        nature: -2,
+        air: -4,
+      },
+    },
+    dust: {
+      strong: {
+        fire: 1,
+        earth: 1,
+      },
+      weak: {
+        nature: -1,
+        air: -1,
+      },
+    },
+    steam: {
+      strong: {
+        fire: 1,
+        nature: 1,
+      },
+      weak: {
+        air: -1,
+        water: -1,
+      },
+    },
+    frost: {
+      strong: {
+        earth: 3,
+        water: 2,
+      },
+      weak: {
+        nature: -3,
+        air: -2,
+      },
+    },
+    inferno: {
+      strong: {
+        nature: 4,
+        air: 2,
+      },
+      weak: {
+        water: -2,
+        earth: -4,
+      },
+    },
+    bloom: {
+      strong: {
+        nature: 1,
+        air: 1,
+      },
+      weak: {
+        water: -1,
+        earth: -1,
+      },
+    },
+    granite: {
+      strong: {
+        fire: 4,
+        nature: 2,
+      },
+      weak: {
+        air: -2,
+        water: -4,
+      },
+    },
   }}
   
   
@@ -208,8 +358,9 @@ function gradeDeck() {
   let deckScores = {};
 
   cards.forEach((card) => {
-    const affinity = card.getAttribute('data-affinity');
-
+    const affinity = card.getAttribute('data-affinity').charAt(0).toUpperCase() + card.getAttribute('data-affinity').slice(1);
+    console.log('Affinity:', affinity);
+    
     for (const [target, score] of Object.entries(affinityChart[affinity].strong)) {
       if (!deckScores[target]) deckScores[target] = 0;
       deckScores[target] += score;
