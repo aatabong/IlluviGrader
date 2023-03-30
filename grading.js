@@ -85,268 +85,88 @@ filterButtons.forEach(button => {
 
 
 const affinityChart = {
-  fire: {
-    strong: {
-      verdant: 4,
-      spore: 3,
-      wildfire: 2,
-      nature: 2,
-      tempest: 2,
-      air: 1,
-      shock: 1,
-      toxic: 1,
-    },
-    weak: {
-      granite: -4,
-      mud: -3,
-      earth: -2,
-      magma: -2,
-      tsunami: -2,
-      dust: -1,
-      water: -1,
-      steam: -1,
-    },
+  Fire: {
+    strong: { Verdant: 4, Spore: 3, Wildfire: 2, Nature: 2, Tempest: 2, Air: 1, Shock: 1, Toxic: 1 },
+    weak: { Granite: -4, Mud: -3, Earth: -2, Magma: -2, Tsunami: -2, Dust: -1, Water: -1, Steam: -1 },
   },
-  nature: {
-    strong: {
-      tempest: 4,
-      frost: 3,
-      spore: 2,
-      air: 2,
-      tsunami: 2,
-      dust: 1,
-      water: 1,
-      toxic: 1,
-    },
-    weak: {
-      inferno: -4,
-      magma: -3,
-      wildfire: -2,
-      fire: -2,
-      granite: -2,
-      bloom: -1,
-      earth: -1,
-      steam: -1,
-    },
- 
-    air: {
-      strong: {
-        tsunami: 4,
-        mud: 3,
-        frost: 2,
-        water: 2,
-        granite: 2,
-        steam: 1,
-        earth: 1,
-        dust: 1,
-      },
-      weak: {
-        verdant: -4,
-        wildfire: -3,
-        inferno: -2,
-        nature: -2,
-        spore: -2,
-        shock: -1,
-        fire: -1,
-        bloom: -1,
-      },
-    },
-    water: {
-      strong: {
-        granite: 4,
-        magma: 3,
-        inferno: 2,
-        earth: 2,
-        mud: 2,
-        bloom: 1,
-        fire: 1,
-        steam: 1,
-      },
-      weak: {
-        tempest: -4,
-        spore: -3,
-        verdant: -2,
-        air: -2,
-        frost: -2,
-        toxic: -1,
-        nature: -1,
-        shock: -1,
-      },
-    },
-    earth: {
-      strong: {
-        inferno: 4,
-        wildfire: 3,
-        verdant: 2,
-        fire: 2,
-        magma: 2,
-        shock: 1,
-        nature: 1,
-        bloom: 1,
-      },
-      weak: {
-        tsunami: -4,
-        frost: -3,
-        water: -2,
-        mud: -2,
-        tempest: -2,
-        dust: -1,
-        air: -1,
-        toxic: -1,
-      },
-    },
-    verdant: {
-      strong: {
-        air: 4,
-        water: 2,
-      },
-      weak: {
-        fire: -4,
-        earth: -2,
-      },
-    },
-    spore: {
-      strong: {
-        air: 2,
-        water: 3,
-      },
-      weak: {
-        fire: -3,
-        nature: -2,
-      },
-    },
-    wildfire: {
-      strong: {
-        nature: 2,
-        air: 3,
-      },
-      weak: {
-        fire: -2,
-        earth: -3,
-      },
-    },
-    tempest: {
-      strong: {
-        water: 4,
-        earth: 2,
-      },
-      weak: {
-        fire: -2,
-        nature: -4,
-      },
-    },
-    shock: {
-      strong: {
-        air: 1,
-        water: 1,
-      },
-      weak: {
-        fire: -1,
-        earth: -1,
-      },
-    },
-    toxic: {
-      strong: {
-        water: 1,
-        earth: 1,
-      },
-      weak: {
-        fire: -1,
-        nature: -1,
-      },
-    },
-    mud: {
-      strong: {
-        fire: 3,
-        earth: 2,
-      },
-      weak: {
-        air: -3,
-        water: -2,
-      },
-    },
-    magma: {
-      strong: {
-        fire: 2,
-        nature: 3,
-      },
-      weak: {
-        water: -3,
-        earth: -2,
-      },
-    },
-    tsunami: {
-      strong: {
-        fire: 2,
-        earth: 4,
-      },
-      weak: {
-        nature: -2,
-        air: -4,
-      },
-    },
-    dust: {
-      strong: {
-        fire: 1,
-        earth: 1,
-      },
-      weak: {
-        nature: -1,
-        air: -1,
-      },
-    },
-    steam: {
-      strong: {
-        fire: 1,
-        nature: 1,
-      },
-      weak: {
-        air: -1,
-        water: -1,
-      },
-    },
-    frost: {
-      strong: {
-        earth: 3,
-        water: 2,
-      },
-      weak: {
-        nature: -3,
-        air: -2,
-      },
-    },
-    inferno: {
-      strong: {
-        nature: 4,
-        air: 2,
-      },
-      weak: {
-        water: -2,
-        earth: -4,
-      },
-    },
-    bloom: {
-      strong: {
-        nature: 1,
-        air: 1,
-      },
-      weak: {
-        water: -1,
-        earth: -1,
-      },
-    },
-    granite: {
-      strong: {
-        fire: 4,
-        nature: 2,
-      },
-      weak: {
-        air: -2,
-        water: -4,
-      },
-    },
-  }}
-  
+  Nature: {
+    strong: { Tempest: 4, Frost: 3, Spore: 2, Air: 2, Tsunami: 2, Dust: 1, Water: 1, Toxic: 1 },
+    weak: { Inferno: -4, Magma: -3, Wildfire: -2, Fire: -2, Granite: -2, Bloom: -1, Earth: -1, Steam: -1 },
+  },
+  Air: {
+    strong: { Tsunami: 4, Mud: 3, Frost: 2, Water: 2, Granite: 2, Steam: 1, Earth: 1, Dust: 1 },
+    weak: { Verdant: -4, Wildfire: -3, Inferno: -2, Nature: -2, Spore: -2, Shock: -1, Fire: -1, Bloom: -1 },
+  },
+  Water: {
+    strong: { Granite: 4, Magma: 3, Inferno: 2, Earth: 2, Mud: 2, Bloom: 1, Fire: 1, Steam: 1 },
+    weak: { Tempest: -4, Spore: -3, Verdant: -2, Air: -2, Frost: -2, Toxic: -1, Nature: -1, Shock: -1 },
+  },
+  Earth: {
+    strong: { Inferno: 4, Wildfire: 3, Verdant: 2, Fire: 2, Magma: 2, Shock: 1, Nature: 1, Bloom: 1 },
+    weak: { Tsunami: -4, Frost: -3, Water: -2, Mud: -2, Tempest: -2, Dust: -1, Air: -1, Toxic: -1 },
+  },
+  Verdant: {
+    strong: { Tempest: 8, Frost: 6, Spore: 4, Tsunami: 4, Air: 4, Toxic: 2, Dust: 2, Water: 2},
+    weak: { Inferno: -8, Magma: -6, Granite: -4, Wildfire: -4, Fire: -4, Steam: -2, Bloom: -2, Earth: -2 },
+  },
+  Spore: {
+    strong: { Tsunami: 6, Frost: 5, Tempest: 4, Mud: 3, Water: 3, Dust: 2, Air: 2, Toxic: 1},
+    weak: { Inferno: -6, Wildfire: -5, Verdant: -4, Magma: -3, Fire: -3, Nature: -2, Bloom: -2, Shock: -1},
+  },
+  Wildfire: {
+    strong: { Tempest: 6, Spore: 5, Verdant: 4, Frost: 3, Air: 3, Toxic: 2, Nature: 2, Shock: 1},
+    weak: { Granite: -6, Magma: -5, Inferno: -4, Earth: -3, Mud: -3, Steam: -2, Fire: -2, Bloom: -1},
+  },
+  Tempest: {
+    strong: { Tsunami: 8, Mud: 6, Frost: 4, Granite: 4, Water: 4, Steam: 2, Dust: 2, Earth: 2},
+    weak: { Verdant: -8, Wildfire: -6, Spore: -4, Inferno: -4, Nature: -4, Fire: -2, Bloom: -2, Shock: -2 },
+  },
+  Shock: {
+    strong: { Frost: 2, Tempest: 2, Tsunami: 2, Spore: 1, Toxic: 1, Air: 1, Water: 1,},
+    weak: { Magma: -2, Granite: -2, Inferno: -2, Wildfire: -1, Bloom: -1, Fire: -1, Earth: -1,},
+  },
+  Toxic: {
+    strong: { Mud: 2, Granite: 2, Tsunami: 2, Frost: 1, Dust: 1, Earth: 1, Water: 1,},
+    weak: { Wildfire: -2, Verdant: -2, Inferno: -2, Spore: -1, Shock: -1, Fire: -1, Nature: -1,},
+  },
+  Mud: {
+    strong: { Inferno: 6, Magma: 5, Granite: 4, Wildfire: 3, Fire: 3, Bloom: 2, Earth: 2, Steam: 1},
+    weak: { Tempest: -6, Frost: -5, Tsunami: -4, Spore: -3, Air: -3, Toxic: -2, Water: -2, Dust: -1},
+  },
+  Magma: {
+    strong: { Verdant: 6, Wildfire: 5, Inferno: 4, Nature: 3, Spore: 3, Shock: 2, Fire: 2, Bloom: 1},
+    weak: { Tsunami: -6, Mud: -5, Granite: -4, Frost: -3, Water: -3, Dust: -2, Earth: -2, Steam: -1},
+  },
+  Tsunami: {
+    strong: { Granite: 8, Magma: 6, Earth: 4, Mud: 4, Inferno: 4, Steam: 2, Bloom: 2, Fire: 2},
+    weak: { Tempest: -8, Spore: -6, Frost: -4, Verdant: -4, Air: -4, Toxic: -2, Shock: -2, Nature: -2 },
+  },
+  Dust: {
+    strong: { Magma: 2, Granite: 2, Inferno: 2, Mud: 1, Steam: 1, Earth: 1, Fire: 1,},
+    weak: { Spore: -2, Tempest: -2, Verdant: -2, Frost: -1, Toxic: -1, Air: -1, Nature: -1,},
+  },
+  Steam: {
+    strong: { Wildfire: 2, Inferno: 2, Verdant: 2, Magma: 1, Bloom: 1, Fire: 1, Nature: 1,},
+    weak: { Frost: -2, Tempest: -2, Tsunami: -2, Mud: -1, Dust: -1, Air: -1, Water: -1,},
+  },
+  Frost: {
+    strong: { Granite: 6, Mud: 5, Tsunami: 4, Earth: 3, Magma: 3, Steam: 2, Water: 2, Dust: 1},
+    weak: { Verdant: -6, Spore: -5, Tempest: -4, Wildfire: -3, Nature: -3, Shock: -2, Air: -2, Toxic: -1},
+  },
+  Inferno: {
+    strong: { Verdant: 8, Spore: 6, Wildfire: 4, Tempest: 4, Nature: 4, Air: 2, Shock: 2, Toxic: 2},
+    weak: { Granite: -8, Mud: -6, Magma: -4, Tsunami: -4, Earth: -4, Steam: -2, Dust: -2, Water: -2 },
+  },
+  Bloom: {
+    strong: { Verdant: 2, Tempest: 2, Spore: 2, Nature: 1, Air: 1, Shock: 1, Wildfire: 1,},
+    weak: { Mud: -2, Granite: -2, Tsunami: -2, Magma: -1, Steam: -1, Earth: -1, Water: -1,},
+  },
+  Granite: {
+    strong: { Inferno: 8, Wildfire: 6, Fire: 4, Verdant: 4, Magma: 4, Bloom: 2, Shock: 2, Nature: 2},
+    weak: { Tsunami: -8, Frost: -6, Mud: -4, Tempest: -4, Water: -4, Toxic: -2, Dust: -2, Air: -2 },
+  },
+};
+
   
 
 function gradeDeck() {
