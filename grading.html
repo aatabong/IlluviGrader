@@ -1,4 +1,4 @@
-\<!DOCTYPE html>
+<!DOCTYPE html>
 <html lang="en">
   <head>
     <meta charset="UTF-8">
@@ -27,7 +27,7 @@
     <div class="grading-container">
           <section class="card-selection">
             <h2>Choose Cards for Your Deck:</h2>
-                <div class="filter-bar">
+                <!-- <div class="filter-bar">
                   <div class="filter-section-affinity">
                     <label>Affinity:</label>
                     <button class ='filter-button' id='nature'><img src="illuvium-Affinities/Nature.png"></button>
@@ -60,7 +60,7 @@
                     <button id="filter-button" >Filter</button>
                     <button id="clear-button">Clear Filters</button>
                   </div>
-                </div>
+                </div> -->
                   <div class="card-grid">
                     <div class="card" data-src="illuvial-card-img/Atlas.png" ondblclick="" data-illuvial="atlas" data-affinity="water" data-tier="one" data-class="bulwark" onclick="addCardToDeckPreview(this)">
                       <img src="illuvial-card-img/Atlas.png">
@@ -210,7 +210,7 @@
             <button id="submit-deck" class="submit-deck">Submit Deck</button>
           </section>
           <section class="deck-grading">
-            <section class="deck-grading">
+            <div class="deck-grading">
               <h2>Deck Grade:</h2>
               <h3>Strengths:</h3>
                 <ul id="deck-strengths">
@@ -220,7 +220,11 @@
                 <ul id="deck-weaknesses">
                   <!-- Add the weaknesses of the deck here -->
                 </ul>
-            </section> 
+                <h3>Suggestions:</h3>
+                <ul id="deck-suggestions" ><!-- Add the weaknesses of the deck here -->
+                  
+                </ul>
+              </div> 
             <script src="grading.js"></script>
     </div>
   </body>
