@@ -341,14 +341,14 @@ ul {
 li {
     margin-bottom: 20px;
 }
+.flex-container {
+  display: flex;
+  justify-content: space-between;
 
-.strengths-weaknesses{
-  display: inline-flex;  /* establishes a flex context */
-  justify-content: space-between; /* if you want some space between the columns */
 }
-.strengths,
-.weaknesses {
-  flex: 1;  /* allows the columns to grow and shrink as needed */
+#strengths-section,
+#weaknesses-section {
+    flex: 1;
 }
 
 @keyframes fadeIn {
