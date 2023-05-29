@@ -31,7 +31,8 @@ body {
   .container {
     max-width: 1170px;
     margin: 0 auto;
-    padding: 40px;
+    padding: 20px;
+    padding-top: 2.5px;
   }
   
   header {
@@ -40,6 +41,7 @@ body {
     padding: 20px;
     padding-bottom: 0px;
     text-align: center;
+    box-sizing: border-box;
     width: 100%;
     top: 0;
     left: 0;
@@ -63,6 +65,62 @@ body {
     list-style: none;
     margin: 0;
     padding-inline-end: 50px;
+    padding-right: 20px;
+    padding-bottom: 20px;
+    padding-top: 5px;
+  }
+  hr{
+    background-color: #76f0b2;
+    height: 1.5px;
+    border: none, ridge, #76f0b2 ;
+    
+  }
+  @media screen and (max-width: 1400px) {
+    .nav-list {
+      flex-direction: column;
+      align-items: center;
+      text-align: center;
+      padding: 0;
+      display: flex;
+      gap: 25px;
+    }
+  
+    .logo-container {
+      width: 100%;
+      height: auto;
+      margin-bottom: 25px;
+      align-items: center;
+      justify-content: center;
+      width: 150px;  /* adjust as needed */
+      height: auto; /* adjust as needed */
+    }
+  
+    .logo-container img {
+      width: auto;
+      height: auto;
+      align-items: center;
+      height: auto;
+    }
+  
+    .nav-item {
+      margin: 10px 0;
+      padding: 25px;
+      border: 7.5px outset #76f0b2;
+      width: 95%;
+    }
+  
+    .nav-link {
+      padding: 5px;
+      margin: 10px;
+      font-size: 36px;  
+      width: 100%;
+    }
+    .nav-item .nav-link {
+      font-size: 60px;  /* adjust this size as needed */
+      padding: 0;
+      width: 100%;
+    }
+
   }
   
   .nav-item {
@@ -75,8 +133,8 @@ body {
     text-decoration: none;
     font-size: 24px;
     font-weight: bold;
-    padding: 15px 125px;
-    padding-bottom: 25px;
+    padding: 17.5px 82.5px;
+    padding-bottom: 75px;
     transition: background-color 0.8s ease-in-out;
     border-radius: 5px;    
   }
@@ -84,6 +142,13 @@ body {
   .nav-link:hover {
     background-color: #5c5c5c;
   }
+  
+  .nav-list #coming-soon:hover {
+    cursor: wait;
+  }
+  
+  
+
   .logo-container {
     width: 100x;
     height: 100px;
@@ -133,6 +198,9 @@ body {
     color: #333;
     cursor: pointer;
   }
+  /* .btn:hover {
+
+  } */
   
   footer {
     background-color: #333;
