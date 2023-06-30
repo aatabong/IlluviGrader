@@ -28,60 +28,6 @@ function addCardToDeckPreview() {
   });
 }
 
-// Select the filter-bar div and all the filter buttons
-const filterBar = document.querySelector('.filter-bar');
-const filterButtons = filterBar.querySelectorAll('.filter-button');
-
-// Select the filter-image div
-const filterImage = document.querySelector('.filter-image');
-
-// Set up variables to keep track of the number of images from each filter section
-let affinityCount = 0;
-let classCount = 0;
-let tierCount = 0;
-
-// Set up event listeners for each filter button
-filterButtons.forEach(button => {
-  button.addEventListener('click', () => {
-    // Check the ID of the button to determine which filter section it belongs to
-    if (button.parentNode.classList.contains('filter-section-affinity')) {
-      // Check if the maximum number of images from the affinity filter section has been reached
-      if (affinityCount >= 2) {
-        return;
-      }
-      affinityCount++;
-      // Add a class to the new image element to indicate it came from the affinity filter section
-      const newImage = document.createElement('img');
-      newImage.src = button.querySelector('img').src;
-      newImage.classList.add('affinity');
-      filterImage.appendChild(newImage).setAttribute('id', button.id);
-    } else if (button.parentNode.classList.contains('filter-section-class')) {
-      // Check if the maximum number of images from the class filter section has been reached
-      if (classCount >= 2) {
-        return;
-      }
-      classCount++;
-      // Add a class to the new image element to indicate it came from the class filter section
-      const newImage = document.createElement('img');
-      newImage.src = button.querySelector('img').src;
-      newImage.classList.add('class');
-      filterImage.appendChild(newImage).setAttribute('id', button.id);
-    } else if (button.parentNode.classList.contains('filter-section-tier')) {
-      // Check if the maximum number of images from the tier filter section has been reached
-      if (tierCount >= 1) {
-        return;
-      }
-      tierCount++;
-      // Add a class to the new image element to indicate it came from the tier filter section
-      const newImage = document.createElement('img');
-      newImage.src = button.querySelector('img').src;
-      newImage.classList.add('tier');
-      filterImage.appendChild(newImage).setAttribute('id', button.id);
-    }
-  });
-});
-
-
 
 
 const affinityChart = {
@@ -167,13 +113,17 @@ const affinityChart = {
   },
 };
 
-  
+
+
 
 function gradeDeck() {
   const selectedCards = document.querySelector('.selected-cards');
   const cards = selectedCards.querySelectorAll('.selected-card');
   const deckStrengths = document.querySelector('#deck-strengths');
   const deckWeaknesses = document.querySelector('#deck-weaknesses');
+  const deckSuggestions = document.querySelector('#deck-suggestions');
+  
+
 
   let deckScores = {};
 
@@ -195,17 +145,67 @@ function gradeDeck() {
   deckStrengths.innerHTML = '';
   deckWeaknesses.innerHTML = '';
 
-  for (const [affinity, score] of Object.entries(deckScores)) {
-    const listItem = document.createElement('li');
+  const strengthList = [];
+  const weaknessList = [];
 
+  for (const [affinity, score] of Object.entries(deckScores)) {
     if (score > 0) {
-      listItem.textContent = `Strong against ${affinity}: ${score}`;
-      deckStrengths.appendChild(listItem);
+      strengthList.push({ affinity, score });
     } else if (score < 0) {
-      listItem.textContent = `Weak against ${affinity}: ${score}`;
-      deckWeaknesses.appendChild(listItem);
+      weaknessList.push({ affinity, score });
     }
   }
+
+  strengthList.sort((a, b) => b.score - a.score);
+  weaknessList.sort((a, b) => a.score - b.score);
+
+  strengthList.forEach(({ affinity, score }) => {
+    const listItem = document.createElement('li');
+    listItem.textContent = `${affinity} Illuvials: ${score}`;
+    deckStrengths.appendChild(listItem);
+  });
+
+  weaknessList.forEach(({ affinity, score }) => {
+    const listItem = document.createElement('li');
+    listItem.textContent = `${affinity} Illuvials: ${score}`;
+    deckWeaknesses.appendChild(listItem);
+  });
+  
+  deckSuggestions.innerHTML = '';
+
+  const suggestions = {};
+
+  // Find the strongest counter affinities for each weakness
+  for (const [weakAffinity, weakScore] of Object.entries(deckScores)) {
+    if (weakScore >= 0) continue;
+
+    for (const [affinity, chart] of Object.entries(affinityChart)) {
+      for (const [strongAffinity, strongScore] of Object.entries(chart.strong)) {
+        if (strongAffinity === weakAffinity) {
+          if (!suggestions[affinity]) suggestions[affinity] = 0;
+          suggestions[affinity] += Math.abs(weakScore) * strongScore;
+        }
+      }
+    }
+  }
+
+  // Display suggested affinities to counter the deck's weaknesses
+  const suggestionList = [];
+
+  for (const [suggestedAffinity, suggestionScore] of Object.entries(suggestions)) {
+    suggestionList.push({ suggestedAffinity, suggestionScore });
+  }
+
+  suggestionList.sort((a, b) => b.suggestionScore - a.suggestionScore);
+
+  suggestionList.forEach(({ suggestedAffinity, suggestionScore }) => {
+    const listItem = document.createElement('li');
+    listItem.textContent = `${suggestedAffinity} Illuvials: ${suggestionScore}`;
+    deckSuggestions.appendChild(listItem);
+  });
+
+
 }
 
-document.querySelector('#submit-deck').addEventListener('click', gradeDeck);
+
+document.querySelector('#submit-deck').addEventListener('click', gradeDeck, );
