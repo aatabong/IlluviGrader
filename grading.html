@@ -6,7 +6,6 @@
     <link rel="stylesheet" href="grading.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
     <link rel="shortcut icon" type="image/png" href="logo.png"/>
-
  </head>
   <body>
     <header>
@@ -28,40 +27,7 @@
     <div class="grading-container">
           <section class="card-selection">
             <h2>Choose Cards for Your Deck:</h2>
-                <!-- <div class="filter-bar">
-                  <div class="filter-section-affinity">
-                    <label>Affinity:</label>
-                    <button class ='filter-button' id='nature'><img src="illuvium-Affinities/Nature.png"></button>
-                    <button class ='filter-button' id="fire"><img src="illuvium-Affinities/Fire.png"></button>
-                    <button class ='filter-button' id="earth"><img src="illuvium-Affinities/Earth.png"></button>
-                    <button class ='filter-button' id="water"><img src="illuvium-Affinities/Water.png"></button>
-                    <button class ='filter-button' id="air"><img src="illuvium-Affinities/Air.png"></button>
-                  </div>
-                  <div class="filter-section-class">
-                    <label>Class:</label>
-                    <button class ='filter-button' id="bulwark"><img src="illuvium-Classes/Bulwark.png"></button>
-                    <button class ='filter-button' id="fighter"><img src="illuvium-Classes/Fighter.png"></button>
-                    <button class ='filter-button' id="psion"><img src="illuvium-Classes/Psion.png"></button>
-                    <button class ='filter-button' id="rogue"><img src="illuvium-Classes/Rogue.png"></button>
-                  </div>
-                  <div class="filter-section-tier">
-                    <label>Tier:</label>
-                    <button class ='filter-button' id="one"><img src="illuvium-Stages/Stage1.png"></button>
-                    <button class ='filter-button' id="two"><img src="illuvium-Stages/Stage2.png"></button>
-                    <button class ='filter-button' id="three"><img src="illuvium-Stages/Stage3.png"></button>
-                  </div>
-                  <div class="filter-section-search">
-                    <label>Search:</label>
-                    <input type="text"></input>
-                  </div>
-                </div>
-                <div class= "selected-filters" id="filter-section">
-                  <div class="filter-image"></div>
-                  <div class='filter-btns'>
-                    <button id="filter-button" >Filter</button>
-                    <button id="clear-button">Clear Filters</button>
-                  </div>
-                </div> -->
+            <h4>Click To Add Card To Deck</h4>
                   <div class="card-grid">
                     <div class="card" data-src="illuvial-card-img/Atlas.png" data-illuvial="atlas" data-affinity="water" data-tier="one" data-class="bulwark" onclick="addCardToDeckPreview(this)">
                       <img src="illuvial-card-img/Atlas.png">
@@ -71,15 +37,6 @@
                     </div>
                     <div class="card" data-src="illuvial-card-img/Axodon.png" data-illuvial="axodon" data-affinity="tsunami" data-tier="three" data-class="harbinger" onclick="addCardToDeckPreview(this)">
                       <img src="illuvial-card-img/Axodon.png">
-                    </div>
-                    <div class="card" data-src="illuvial-card-img/Rhamphy.png" data-illuvial="rhamphy" data-affinity="fire" data-tier="one" data-class="fire" onclick="addCardToDeckPreview(this)">
-                      <img src="illuvial-card-img/Rhamphy.png">
-                    </div>
-                    <div class="card" data-src="illuvial-card-img/Rhamphite.png" data-illuvial="rhamphite" data-affinity="fire" data-tier="two" data-class="slayer" onclick="addCardToDeckPreview(this)">
-                      <img src="illuvial-card-img/Rhamphite.png">
-                    </div>
-                    <div class="card" data-src="illuvial-card-img/Rhamphyre.png" data-illuvial="rhamphyre" data-affinity="inferno" data-tier="three" data-class="slayer" onclick="addCardToDeckPreview(this)">
-                      <img src="illuvial-card-img/Rhamphyre.png">
                     </div>
                     <div class="card" data-src="illuvial-card-img/Rypter.png" data-illuvial="rypter" data-affinity="water" data-tier="one" data-class="fighter" onclick="addCardToDeckPreview(this)">
                       <img src="illuvial-card-img/Rypter.png">
@@ -99,60 +56,6 @@
                     <div class="card" data-src="illuvial-card-img/Umbre.png" data-illuvial="ryplance" data-affinity="steam" data-tier="three" data-class="slayer" onclick="addCardToDeckPreview(this)">
                       <img src="illuvial-card-img/Umbre.png">
                     </div>
-                    <div class="card" data-src="illuvial-card-img/Archie.png" data-illuvial="archie" data-affinity="nature" data-tier="one" data-class="empath" onclick="addCardToDeckPreview(this)">
-                      <img src="illuvial-card-img/Archie.png">
-                    </div>
-                    <div class="card" data-src="illuvial-card-img/Archos.png" data-illuvial="archos" data-affinity="nature" data-tier="two" data-class="aegis" onclick="addCardToDeckPreview(this)">
-                      <img src="illuvial-card-img/Archos.png">
-                    </div>
-                    <div class="card" data-src="illuvial-card-img/Archeleon.png" data-illuvial="archeleon" data-affinity="verdant" data-tier="three" data-class="aegis" onclick="addCardToDeckPreview(this)">
-                      <img src="illuvial-card-img/Archeleon.png">
-                    </div>
-                    <div class="card" data-src="illuvial-card-img/Vermi.png" data-illuvial="vermi" data-affinity="air" data-tier="one" data-class="empath" onclick="addCardToDeckPreview(this)">
-                      <img src="illuvial-card-img/Vermi.png">
-                    </div>
-                    <div class="card" data-src="illuvial-card-img/Vermillia.png" data-illuvial="vermillia" data-affinity="air" data-tier="two" data-class="revenant" onclick="addCardToDeckPreview(this)">
-                      <img src="illuvial-card-img/Vermillia.png">
-                    </div>
-                    <div class="card" data-src="illuvial-card-img/Vermilliare.png" data-illuvial="vermilliare" data-affinity="spore" data-tier="three" data-class="revenant" onclick="addCardToDeckPreview(this)">
-                      <img src="illuvial-card-img/Vermilliare.png">
-                    </div>
-                    <div class="card" data-src="illuvial-card-img/Scarabok.png" data-illuvial="scarabok" data-affinity="earth" data-tier="one" data-class="bulwark" onclick="addCardToDeckPreview(this)">
-                      <img src="illuvial-card-img/Scarabok.png">
-                    </div>
-                    <div class="card" data-src="illuvial-card-img/Goliant.png" data-illuvial="goliant" data-affinity="granite" data-tier="two" data-class="bulwark" onclick="addCardToDeckPreview(this)">
-                      <img src="illuvial-card-img/Goliant.png">
-                    </div>
-                    <div class="card" data-src="illuvial-card-img/Titanor.png" data-illuvial="titanor" data-affinity="granite" data-tier="three" data-class="collossus" onclick="addCardToDeckPreview(this)">
-                      <img src="illuvial-card-img/Titanor.png">
-                    </div>
-                    <div class="card" data-src="illuvial-card-img/Kukka.png" data-illuvial="kukka" data-affinity="air" data-tier="one" data-class="empath" onclick="addCardToDeckPreview(this)">
-                      <img src="illuvial-card-img/Kukka.png">
-                    </div>
-                    <div class="card" data-src="illuvial-card-img/Kukkulus.png" data-illuvial="kukkulus" data-affinity="air" data-tier="two" data-class="enchanter" onclick="addCardToDeckPreview(this)">
-                      <img src="illuvial-card-img/Kukkulus.png">
-                    </div>
-                    <div class="card" data-src="illuvial-card-img/Kukkaraph.png" data-illuvial="kukkaraph" data-affinity="tempest" data-tier="three" data-class="enchanter" onclick="addCardToDeckPreview(this)">
-                      <img src="illuvial-card-img/Kukkaraph.png">
-                    </div>
-                    <div class="card" data-src="illuvial-card-img/Ador.png" data-illuvial="ador" data-affinity="nature" data-tier="one" data-class="empath" onclick="addCardToDeckPreview(this)">
-                      <img src="illuvial-card-img/Ador.png">
-                    </div>
-                    <div class="card" data-src="illuvial-card-img/Adoredo.png" data-illuvial="adoredo" data-affinity="spore" data-tier="two" data-class="empath" onclick="addCardToDeckPreview(this)">
-                      <img src="illuvial-card-img/Adoredo.png">
-                    </div>
-                    <div class="card" data-src="illuvial-card-img/Adorius.png" data-illuvial="adorius" data-affinity="spore" data-tier="three" data-class="mystic" onclick="addCardToDeckPreview(this)">
-                      <img src="illuvial-card-img/Adorius.png">
-                    </div>
-                    <div class="card" data-src="illuvial-card-img/Flare.png" data-illuvial="flare" data-affinity="fire" data-tier="one" data-class="bulwark" onclick="addCardToDeckPreview(this)">
-                      <img src="illuvial-card-img/Flare.png">
-                    </div>
-                    <div class="card" data-src="illuvial-card-img/Singe.png" data-illuvial="singe" data-affinity="magma" data-tier="two" data-class="bulwark" onclick="addCardToDeckPreview(this)">
-                      <img src="illuvial-card-img/Singe.png">
-                    </div>
-                    <div class="card" data-src="illuvial-card-img/Sear.png" data-illuvial="sear" data-affinity="magma" data-tier="three" data-class="behemoth" onclick="addCardToDeckPreview(this)">
-                      <img src="illuvial-card-img/Sear.png">
-                    </div>
                     <div class="card" data-src="illuvial-card-img/Alphie.png" data-illuvial="alphie" data-affinity="water" data-tier="one" data-class="psion" onclick="addCardToDeckPreview(this)">
                       <img src="illuvial-card-img/Alphie.png">
                     </div>
@@ -161,42 +64,6 @@
                     </div>
                     <div class="card" data-src="illuvial-card-img/Dualeph.png" data-illuvial="dualeph" data-affinity="steam" data-tier="three" data-class="invoker" onclick="addCardToDeckPreview(this)">
                       <img src="illuvial-card-img/Dualeph.png">
-                    </div>
-                    <div class="card" data-src="illuvial-card-img/Fern.png" data-illuvial="fern" data-affinity="nature" data-tier="one" data-class="empath" onclick="addCardToDeckPreview(this)">
-                      <img src="illuvial-card-img/Fern.png">
-                    </div>
-                    <div class="card" data-src="illuvial-card-img/Fernite.png" data-illuvial="fernite" data-affinity="nature" data-tier="two" data-class="templar" onclick="addCardToDeckPreview(this)">
-                      <img src="illuvial-card-img/Fernite.png">
-                    </div>
-                    <div class="card" data-src="illuvial-card-img/Blazenite.png" data-illuvial="blazenite" data-affinity="wildfire" data-tier="three" data-class="templar" onclick="addCardToDeckPreview(this)">
-                      <img src="illuvial-card-img/Blazenite.png">
-                    </div>
-                    <div class="card" data-src="illuvial-card-img/Lura.png" data-illuvial="lura" data-affinity="earth" data-tier="one" data-class="rogue" onclick="addCardToDeckPreview(this)">
-                      <img src="illuvial-card-img/Lura.png">
-                    </div>
-                    <div class="card" data-src="illuvial-card-img/Loulura.png" data-illuvial="loulura" data-affinity="bloom" data-tier="two" data-class="rogue" onclick="addCardToDeckPreview(this)">
-                      <img src="illuvial-card-img/Loulura.png">
-                    </div>
-                    <div class="card" data-src="illuvial-card-img/Malura.png" data-illuvial="malura" data-affinity="bloom" data-tier="three" data-class="vanguard" onclick="addCardToDeckPreview(this)">
-                      <img src="illuvial-card-img/Malura.png">
-                    </div>
-                    <div class="card" data-src="illuvial-card-img/Phyri.png" data-illuvial="phyri" data-affinity="fire" data-tier="one" data-class="psion" onclick="addCardToDeckPreview(this)">
-                      <img src="illuvial-card-img/Phyri.png">
-                    </div>
-                    <div class="card" data-src="illuvial-card-img/Phyriox.png" data-illuvial="phyriox" data-affinity="fire" data-tier="two" data-class="arcanite" onclick="addCardToDeckPreview(this)">
-                      <img src="illuvial-card-img/Phyriox.png">
-                    </div>
-                    <div class="card" data-src="illuvial-card-img/Scoriox.png" data-illuvial="scoriox" data-affinity="magma" data-tier="three" data-class="arcanite" onclick="addCardToDeckPreview(this)">
-                      <img src="illuvial-card-img/Scoriox.png">
-                    </div>
-                    <div class="card" data-src="illuvial-card-img/Tatopee.png" data-illuvial="tatopee" data-affinity="earth" data-tier="one" data-class="psion" onclick="addCardToDeckPreview(this)">
-                      <img src="illuvial-card-img/Tatopee.png">
-                    </div>
-                    <div class="card" data-src="illuvial-card-img/Teeantee.png" data-illuvial="teeantee" data-affinity="granite" data-tier="two" data-class="psion" onclick="addCardToDeckPreview(this)">
-                      <img src="illuvial-card-img/Teeantee.png">
-                    </div>
-                    <div class="card" data-src="illuvial-card-img/Seeforus.png" data-illuvial="seeforus" data-affinity="granite" data-tier="three" data-class="psion" onclick="addCardToDeckPreview(this)">
-                      <img src="illuvial-card-img/Seeforus.png">
                     </div>
                     <div class="card" data-src="illuvial-card-img/RelentlessHydrolynx.png" data-illuvial="RelentlessHydrolynx" data-affinity="water" data-tier="three" data-class="fighter" onclick="addCardToDeckPreview(this)">
                       <img src="illuvial-card-img/RelentlessHydrolynx.png">
@@ -213,20 +80,77 @@
                     <div class="card" data-src="illuvial-card-img/VirtuousHydrolynx.png" data-illuvial="VirtuousHydrolynx" data-affinity="water" data-tier="three" data-class="empath" onclick="addCardToDeckPreview(this)">
                       <img src="illuvial-card-img/VirtuousHydrolynx.png">
                     </div>
-                    <div class="card" data-src="illuvial-card-img/RelentlessTerralynx.png" data-illuvial="RelentlessTerralynx" data-affinity="earth" data-tier="three" data-class="fighter" onclick="addCardToDeckPreview(this)">
-                      <img src="illuvial-card-img/RelentlessTerralynx.png">
+                    <div class="card" data-src="illuvial-card-img/LesserWaterDoka.png" data-illuvial="LesserWaterDoka" data-affinity="water" data-tier="one" data-class="fighter" onclick="addCardToDeckPreview(this)">
+                      <img src="illuvial-card-img/LesserWaterDoka.png">
                     </div>
-                    <div class="card" data-src="illuvial-card-img/NimbleTerralynx.png" data-illuvial="NimbleTerralynx" data-affinity="earth" data-tier="three" data-class="rogue" onclick="addCardToDeckPreview(this)">
-                      <img src="illuvial-card-img/NimbleTerralynx.png">
+                    <div class="card" data-src="illuvial-card-img/GreaterWaterDoka.png" data-illuvial="GreaterWaterDoka" data-affinity="water" data-tier="two" data-class="fighter" onclick="addCardToDeckPreview(this)">
+                      <img src="illuvial-card-img/GreaterWaterDoka.png">
                     </div>
-                    <div class="card" data-src="illuvial-card-img/StoicTerralynx.png" data-illuvial="StoicTerralynx" data-affinity="earth" data-tier="three" data-class="bulwark" onclick="addCardToDeckPreview(this)">
-                      <img src="illuvial-card-img/StoicTerralynx.png">
+                    <div class="card" data-src="illuvial-card-img/ExaltedWaterDoka.png" data-illuvial="ExaltedWaterDoka" data-affinity="water" data-tier="three" data-class="fighter" onclick="addCardToDeckPreview(this)">
+                      <img src="illuvial-card-img/ExaltedWaterDoka.png">
                     </div>
-                    <div class="card" data-src="illuvial-card-img/ArcaneTerralynx.png" data-illuvial="ArcaneTerralynx" data-affinity="earth" data-tier="three" data-class="psion" onclick="addCardToDeckPreview(this)">
-                      <img src="illuvial-card-img/ArcaneTerralynx.png">
+                    <div class="card" data-src="illuvial-card-img/LesserWaterGrokko.png" data-illuvial="LesserWaterGrokko" data-affinity="water" data-tier="one" data-class="bulwark" onclick="addCardToDeckPreview(this)">
+                      <img src="illuvial-card-img/LesserWaterGrokko.png">
                     </div>
-                    <div class="card" data-src="illuvial-card-img/VirtuousTerralynx.png" data-illuvial="VirtuousTerralynx" data-affinity="earth" data-tier="three" data-class="empath" onclick="addCardToDeckPreview(this)">
-                      <img src="illuvial-card-img/VirtuousTerralynx.png">
+                    <div class="card" data-src="illuvial-card-img/GreaterWaterGrokko.png" data-illuvial="GreaterWaterGrokko" data-affinity="water" data-tier="two" data-class="bulwark" onclick="addCardToDeckPreview(this)">
+                      <img src="illuvial-card-img/GreaterWaterGrokko.png">
+                    </div>
+                    <div class="card" data-src="illuvial-card-img/ExaltedWaterGrokko.png" data-illuvial="ExaltedWaterGrokko" data-affinity="water" data-tier="there" data-class="bulwark" onclick="addCardToDeckPreview(this)">
+                      <img src="illuvial-card-img/ExaltedWaterGrokko.png">
+                    </div>
+                    <div class="card" data-src="illuvial-card-img/LesserWaterVolante.png" data-illuvial="LesserWaterVolante" data-affinity="Water" data-tier="one" data-class="rogue" onclick="addCardToDeckPreview(this)">
+                      <img src="illuvial-card-img/LesserWaterVolante.png">
+                    </div>
+                    <div class="card" data-src="illuvial-card-img/GreaterWaterVolante.png" data-illuvial="GreaterWaterVolante" data-affinity="Water" data-tier="two" data-class="rogue" onclick="addCardToDeckPreview(this)">
+                      <img src="illuvial-card-img/GreaterWaterVolante.png">
+                    </div>
+                    <div class="card" data-src="illuvial-card-img/ExaltedWaterVolante.png" data-illuvial="ExaltedWaterVolante" data-affinity="Water" data-tier="three" data-class="rogue" onclick="addCardToDeckPreview(this)">
+                      <img src="illuvial-card-img/ExaltedWaterVolante.png">
+                    </div>
+                    <div class="card" data-src="illuvial-card-img/LesserWaterFliish.png" data-illuvial="LesserWaterFliish" data-affinity="Water" data-tier="one" data-class="Psion" onclick="addCardToDeckPreview(this)">
+                      <img src="illuvial-card-img/LesserWaterFliish.png">
+                    </div>
+                    <div class="card" data-src="illuvial-card-img/GreaterWaterfliish.png" data-illuvial="GreaterWaterFliish" data-affinity="Water" data-tier="two" data-class="Psion" onclick="addCardToDeckPreview(this)">
+                      <img src="illuvial-card-img/GreaterWaterFliish.png">
+                    </div>
+                    <div class="card" data-src="illuvial-card-img/ExaltedWaterFliish.png" data-illuvial="ExaltedWaterFLiish" data-affinity="Water" data-tier="three" data-class="Psion" onclick="addCardToDeckPreview(this)">
+                      <img src="illuvial-card-img/ExaltedWaterFliish.png">
+                    </div>
+                    <div class="card" data-src="illuvial-card-img/LesserWaterAtippo.png" data-illuvial="LesserWaterAtippo" data-affinity="Water" data-tier="one" data-class="empath" onclick="addCardToDeckPreview(this)">
+                      <img src="illuvial-card-img/LesserWaterAtippo.png">
+                    </div>
+                    <div class="card" data-src="illuvial-card-img/GreaterWaterAtippo.png" data-illuvial="GreaterWaterAtippo" data-affinity="Water" data-tier="two" data-class="empath" onclick="addCardToDeckPreview(this)">
+                      <img src="illuvial-card-img/GreaterWaterAtippo.png">
+                    </div>
+                    <div class="card" data-src="illuvial-card-img/ExaltedWaterAtippo.png" data-illuvial="ExaltedWaterAtippo" data-affinity="Water" data-tier="three" data-class="empath" onclick="addCardToDeckPreview(this)">
+                      <img src="illuvial-card-img/ExaltedWaterAtippo.png">
+                    </div>
+                    <div class="card" data-src="illuvial-card-img/Rhamphy.png" data-illuvial="rhamphy" data-affinity="fire" data-tier="one" data-class="fire" onclick="addCardToDeckPreview(this)">
+                      <img src="illuvial-card-img/Rhamphy.png">
+                    </div>
+                    <div class="card" data-src="illuvial-card-img/Rhamphite.png" data-illuvial="rhamphite" data-affinity="fire" data-tier="two" data-class="slayer" onclick="addCardToDeckPreview(this)">
+                      <img src="illuvial-card-img/Rhamphite.png">
+                    </div>
+                    <div class="card" data-src="illuvial-card-img/Rhamphyre.png" data-illuvial="rhamphyre" data-affinity="inferno" data-tier="three" data-class="slayer" onclick="addCardToDeckPreview(this)">
+                      <img src="illuvial-card-img/Rhamphyre.png">
+                    </div>
+                    <div class="card" data-src="illuvial-card-img/Flare.png" data-illuvial="flare" data-affinity="fire" data-tier="one" data-class="bulwark" onclick="addCardToDeckPreview(this)">
+                      <img src="illuvial-card-img/Flare.png">
+                    </div>
+                    <div class="card" data-src="illuvial-card-img/Singe.png" data-illuvial="singe" data-affinity="magma" data-tier="two" data-class="bulwark" onclick="addCardToDeckPreview(this)">
+                      <img src="illuvial-card-img/Singe.png">
+                    </div>
+                    <div class="card" data-src="illuvial-card-img/Sear.png" data-illuvial="sear" data-affinity="magma" data-tier="three" data-class="behemoth" onclick="addCardToDeckPreview(this)">
+                      <img src="illuvial-card-img/Sear.png">
+                    </div>
+                    <div class="card" data-src="illuvial-card-img/Phyri.png" data-illuvial="phyri" data-affinity="fire" data-tier="one" data-class="psion" onclick="addCardToDeckPreview(this)">
+                      <img src="illuvial-card-img/Phyri.png">
+                    </div>
+                    <div class="card" data-src="illuvial-card-img/Phyriox.png" data-illuvial="phyriox" data-affinity="fire" data-tier="two" data-class="arcanite" onclick="addCardToDeckPreview(this)">
+                      <img src="illuvial-card-img/Phyriox.png">
+                    </div>
+                    <div class="card" data-src="illuvial-card-img/Scoriox.png" data-illuvial="scoriox" data-affinity="magma" data-tier="three" data-class="arcanite" onclick="addCardToDeckPreview(this)">
+                      <img src="illuvial-card-img/Scoriox.png">
                     </div>
                     <div class="card" data-src="illuvial-card-img/RelentlessEmberlynx.png" data-illuvial="RelentlessEmberlynx" data-affinity="fire" data-tier="three" data-class="fighter" onclick="addCardToDeckPreview(this)">
                       <img src="illuvial-card-img/RelentlessEmberlynx.png">
@@ -243,6 +167,78 @@
                     <div class="card" data-src="illuvial-card-img/VirtuousEmberlynx.png" data-illuvial="VirtuousEmberlynx" data-affinity="fire" data-tier="three" data-class="empath" onclick="addCardToDeckPreview(this)">
                       <img src="illuvial-card-img/VirtuousEmberlynx.png">
                     </div>
+                    <div class="card" data-src="illuvial-card-img/LesserFireDoka.png" data-illuvial="LesserFireDoka" data-affinity="fire" data-tier="one" data-class="fighter" onclick="addCardToDeckPreview(this)">
+                      <img src="illuvial-card-img/LesserFireDoka.png">
+                    </div>
+                    <div class="card" data-src="illuvial-card-img/GreaterFireDoka.png" data-illuvial="GreaterFireDoka" data-affinity="fire" data-tier="two" data-class="fighter" onclick="addCardToDeckPreview(this)">
+                      <img src="illuvial-card-img/GreaterFireDoka.png">
+                    </div>
+                    <div class="card" data-src="illuvial-card-img/ExaltedFireDoka.png" data-illuvial="ExaltedFireDoka" data-affinity="fire" data-tier="three" data-class="fighter" onclick="addCardToDeckPreview(this)">
+                      <img src="illuvial-card-img/ExaltedFireDoka.png">
+                    </div>
+                    <div class="card" data-src="illuvial-card-img/LesserFireGrokko.png" data-illuvial="LesserFireGrokko" data-affinity="Fire" data-tier="one" data-class="bulwark" onclick="addCardToDeckPreview(this)">
+                      <img src="illuvial-card-img/LesserFireGrokko.png">
+                    </div>
+                    <div class="card" data-src="illuvial-card-img/GreaterFireGrokko.png" data-illuvial="GreaterFireGrokko" data-affinity="Fire" data-tier="two" data-class="bulwark" onclick="addCardToDeckPreview(this)">
+                      <img src="illuvial-card-img/GreaterFireGrokko.png">
+                    </div>
+                    <div class="card" data-src="illuvial-card-img/ExaltedFireGrokko.png" data-illuvial="ExaltedFireGrokko" data-affinity="Fire" data-tier="three" data-class="bulwark" onclick="addCardToDeckPreview(this)">
+                      <img src="illuvial-card-img/ExaltedFireGrokko.png">
+                    </div>
+                    <div class="card" data-src="illuvial-card-img/LesserFireVolante.png" data-illuvial="LesserFireVolante" data-affinity="Fire" data-tier="one" data-class="rogue" onclick="addCardToDeckPreview(this)">
+                      <img src="illuvial-card-img/LesserFireVolante.png">
+                    </div>
+                    <div class="card" data-src="illuvial-card-img/GreaterFireVolante.png" data-illuvial="GreaterFireVolante" data-affinity="Fire" data-tier="two" data-class="rogue" onclick="addCardToDeckPreview(this)">
+                      <img src="illuvial-card-img/GreaterFireVolante.png">
+                    </div>
+                    <div class="card" data-src="illuvial-card-img/ExaltedFireVolante.png" data-illuvial="ExaltedFireVolante" data-affinity="Fire" data-tier="three" data-class="rogue" onclick="addCardToDeckPreview(this)">
+                      <img src="illuvial-card-img/ExaltedFireVolante.png">
+                    </div>
+                    <div class="card" data-src="illuvial-card-img/LesserFireFliish.png" data-illuvial="LesserFireFliish" data-affinity="Fire" data-tier="one" data-class="Psion" onclick="addCardToDeckPreview(this)">
+                      <img src="illuvial-card-img/LesserFireFliish.png">
+                    </div>
+                    <div class="card" data-src="illuvial-card-img/GreaterFireFliish.png" data-illuvial="GreaterFireFliish" data-affinity="Fire" data-tier="two" data-class="Psion" onclick="addCardToDeckPreview(this)">
+                      <img src="illuvial-card-img/GreaterFireFliish.png">
+                    </div>
+                    <div class="card" data-src="illuvial-card-img/ExaltedFireFliish.png" data-illuvial="ExaltedFireFliish" data-affinity="Fire" data-tier="three" data-class="Psion" onclick="addCardToDeckPreview(this)">
+                      <img src="illuvial-card-img/ExaltedFireFliish.png">
+                    </div>
+                    <div class="card" data-src="illuvial-card-img/LesserFireAtippo.png" data-illuvial="LesserFireAtippo" data-affinity="Fire" data-tier="one" data-class="empath" onclick="addCardToDeckPreview(this)">
+                      <img src="illuvial-card-img/LesserFireAtippo.png">
+                    </div>
+                    <div class="card" data-src="illuvial-card-img/GreaterFireAtippo.png" data-illuvial="GreaterFireAtippo" data-affinity="Fire" data-tier="two" data-class="empath" onclick="addCardToDeckPreview(this)">
+                      <img src="illuvial-card-img/GreaterFireAtippo.png">
+                    </div>
+                    <div class="card" data-src="illuvial-card-img/ExaltedFireAtippo.png" data-illuvial="ExaltedFireAtippo" data-affinity="Fire" data-tier="three" data-class="empath" onclick="addCardToDeckPreview(this)">
+                      <img src="illuvial-card-img/ExaltedFireAtippo.png">
+                    </div>
+                    <div class="card" data-src="illuvial-card-img/Archie.png" data-illuvial="archie" data-affinity="nature" data-tier="one" data-class="empath" onclick="addCardToDeckPreview(this)">
+                      <img src="illuvial-card-img/Archie.png">
+                    </div>
+                    <div class="card" data-src="illuvial-card-img/Archos.png" data-illuvial="archos" data-affinity="nature" data-tier="two" data-class="aegis" onclick="addCardToDeckPreview(this)">
+                      <img src="illuvial-card-img/Archos.png">
+                    </div>
+                    <div class="card" data-src="illuvial-card-img/Archeleon.png" data-illuvial="archeleon" data-affinity="verdant" data-tier="three" data-class="aegis" onclick="addCardToDeckPreview(this)">
+                      <img src="illuvial-card-img/Archeleon.png">
+                    </div>
+                    <div class="card" data-src="illuvial-card-img/Ador.png" data-illuvial="ador" data-affinity="nature" data-tier="one" data-class="empath" onclick="addCardToDeckPreview(this)">
+                      <img src="illuvial-card-img/Ador.png">
+                    </div>
+                    <div class="card" data-src="illuvial-card-img/Adoredo.png" data-illuvial="adoredo" data-affinity="spore" data-tier="two" data-class="empath" onclick="addCardToDeckPreview(this)">
+                      <img src="illuvial-card-img/Adoredo.png">
+                    </div>
+                    <div class="card" data-src="illuvial-card-img/Adorius.png" data-illuvial="adorius" data-affinity="spore" data-tier="three" data-class="mystic" onclick="addCardToDeckPreview(this)">
+                      <img src="illuvial-card-img/Adorius.png">
+                    </div>
+                    <div class="card" data-src="illuvial-card-img/Fern.png" data-illuvial="fern" data-affinity="nature" data-tier="one" data-class="empath" onclick="addCardToDeckPreview(this)">
+                      <img src="illuvial-card-img/Fern.png">
+                    </div>
+                    <div class="card" data-src="illuvial-card-img/Fernite.png" data-illuvial="fernite" data-affinity="nature" data-tier="two" data-class="templar" onclick="addCardToDeckPreview(this)">
+                      <img src="illuvial-card-img/Fernite.png">
+                    </div>
+                    <div class="card" data-src="illuvial-card-img/Blazenite.png" data-illuvial="blazenite" data-affinity="wildfire" data-tier="three" data-class="templar" onclick="addCardToDeckPreview(this)">
+                      <img src="illuvial-card-img/Blazenite.png">
+                    </div>
                     <div class="card" data-src="illuvial-card-img/RelentlessFloralynx.png" data-illuvial="RelentlessFloralynx" data-affinity="nature" data-tier="three" data-class="fighter" onclick="addCardToDeckPreview(this)">
                       <img src="illuvial-card-img/RelentlessFloralynx.png">
                     </div>
@@ -257,6 +253,69 @@
                     </div>
                     <div class="card" data-src="illuvial-card-img/VirtuousFloralynx.png" data-illuvial="VirtuousFloralynx" data-affinity="nature" data-tier="three" data-class="empath" onclick="addCardToDeckPreview(this)">
                       <img src="illuvial-card-img/VirtuousFloralynx.png">
+                    </div>
+                    <div class="card" data-src="illuvial-card-img/LesserNatureDoka.png" data-illuvial="LesserNatureDoka" data-affinity="nature" data-tier="one" data-class="fighter" onclick="addCardToDeckPreview(this)">
+                      <img src="illuvial-card-img/LesserNatureDoka.png">
+                    </div>
+                    <div class="card" data-src="illuvial-card-img/GreaterNatureDoka.png" data-illuvial="GreaterNatureDoka" data-affinity="nature" data-tier="two" data-class="fighter" onclick="addCardToDeckPreview(this)">
+                      <img src="illuvial-card-img/GreaterNatureDoka.png">
+                    </div>
+                    <div class="card" data-src="illuvial-card-img/ExaltedNatureDoka.png" data-illuvial="ExaltedNatureDoka" data-affinity="nature" data-tier="three" data-class="fighter" onclick="addCardToDeckPreview(this)">
+                      <img src="illuvial-card-img/ExaltedNatureDoka.png">
+                    </div>
+                    <div class="card" data-src="illuvial-card-img/LesserNatureGrokko.png" data-illuvial="LesserNatureGrokko" data-affinity="Nature" data-tier="one" data-class="bulwark" onclick="addCardToDeckPreview(this)">
+                      <img src="illuvial-card-img/LesserNatureGrokko.png">
+                    </div>
+                    <div class="card" data-src="illuvial-card-img/GreaterNatureGrokko.png" data-illuvial="GreaterNatureGrokko" data-affinity="Nature" data-tier="two" data-class="bulwark" onclick="addCardToDeckPreview(this)">
+                      <img src="illuvial-card-img/GreaterNatureGrokko.png">
+                    </div>
+                    <div class="card" data-src="illuvial-card-img/ExaltedNatureGrokko.png" data-illuvial="ExaltedNatureGrokko" data-affinity="Nature" data-tier="third" data-class="bulwark" onclick="addCardToDeckPreview(this)">
+                      <img src="illuvial-card-img/ExaltedNatureGrokko.png">
+                    </div>
+                    <div class="card" data-src="illuvial-card-img/LesserNatureVolante.png" data-illuvial="LesserNatureVolante" data-affinity="Nature" data-tier="one" data-class="rogue" onclick="addCardToDeckPreview(this)">
+                      <img src="illuvial-card-img/LesserNatureVolante.png">
+                    </div>
+                    <div class="card" data-src="illuvial-card-img/GreaterNatureVolante.png" data-illuvial="GreaterNatureVolante" data-affinity="Nature" data-tier="two" data-class="rogue" onclick="addCardToDeckPreview(this)">
+                      <img src="illuvial-card-img/GreaterNatureVolante.png">
+                    </div>
+                    <div class="card" data-src="illuvial-card-img/ExaltedNatureVolante.png" data-illuvial="ExaltedNatureVolante" data-affinity="Nature" data-tier="three" data-class="rogue" onclick="addCardToDeckPreview(this)">
+                      <img src="illuvial-card-img/ExaltedNatureVolante.png">
+                    </div>
+                    <div class="card" data-src="illuvial-card-img/LesserNatureFliish.png" data-illuvial="LesserNatureFliish" data-affinity="Nature" data-tier="one" data-class="Psion" onclick="addCardToDeckPreview(this)">
+                      <img src="illuvial-card-img/LesserNatureFliish.png">
+                    </div>
+                    <div class="card" data-src="illuvial-card-img/GreaterNatureFliish.png" data-illuvial="GreaterNatureFliish" data-affinity="Nature" data-tier="two" data-class="Psion" onclick="addCardToDeckPreview(this)">
+                      <img src="illuvial-card-img/GreaterNatureFliish.png">
+                    </div>
+                    <div class="card" data-src="illuvial-card-img/ExaltedNatureFliish.png" data-illuvial="ExaltedNatureFliish" data-affinity="Nature" data-tier="three" data-class="Psion" onclick="addCardToDeckPreview(this)">
+                      <img src="illuvial-card-img/ExaltedNatureFliish.png">
+                    </div>
+                    <div class="card" data-src="illuvial-card-img/LesserNatureAtippo.png" data-illuvial="LesserNatureAtippo" data-affinity="Nature" data-tier="one" data-class="empath" onclick="addCardToDeckPreview(this)">
+                      <img src="illuvial-card-img/LesserNatureAtippo.png">
+                    </div>
+                    <div class="card" data-src="illuvial-card-img/GreaterNatureAtippo.png" data-illuvial="GreaterNatureAtippo" data-affinity="Nature" data-tier="two" data-class="empath" onclick="addCardToDeckPreview(this)">
+                      <img src="illuvial-card-img/GreaterNatureAtippo.png">
+                    </div>
+                    <div class="card" data-src="illuvial-card-img/ExaltedNatureAtippo.png" data-illuvial="ExaltedNatureAtippo" data-affinity="Nature" data-tier="three" data-class="empath" onclick="addCardToDeckPreview(this)">
+                      <img src="illuvial-card-img/ExaltedNatureAtippo.png">
+                    </div>
+                    <div class="card" data-src="illuvial-card-img/Vermi.png" data-illuvial="vermi" data-affinity="air" data-tier="one" data-class="empath" onclick="addCardToDeckPreview(this)">
+                      <img src="illuvial-card-img/Vermi.png">
+                    </div>
+                    <div class="card" data-src="illuvial-card-img/Vermillia.png" data-illuvial="vermillia" data-affinity="air" data-tier="two" data-class="revenant" onclick="addCardToDeckPreview(this)">
+                      <img src="illuvial-card-img/Vermillia.png">
+                    </div>
+                    <div class="card" data-src="illuvial-card-img/Vermilliare.png" data-illuvial="vermilliare" data-affinity="spore" data-tier="three" data-class="revenant" onclick="addCardToDeckPreview(this)">
+                      <img src="illuvial-card-img/Vermilliare.png">
+                    </div>
+                    <div class="card" data-src="illuvial-card-img/Kukka.png" data-illuvial="kukka" data-affinity="air" data-tier="one" data-class="empath" onclick="addCardToDeckPreview(this)">
+                      <img src="illuvial-card-img/Kukka.png">
+                    </div>
+                    <div class="card" data-src="illuvial-card-img/Kukkulus.png" data-illuvial="kukkulus" data-affinity="air" data-tier="two" data-class="enchanter" onclick="addCardToDeckPreview(this)">
+                      <img src="illuvial-card-img/Kukkulus.png">
+                    </div>
+                    <div class="card" data-src="illuvial-card-img/Kukkaraph.png" data-illuvial="kukkaraph" data-affinity="tempest" data-tier="three" data-class="enchanter" onclick="addCardToDeckPreview(this)">
+                      <img src="illuvial-card-img/Kukkaraph.png">
                     </div>
                     <div class="card" data-src="illuvial-card-img/RelentlessZephyrLynx.png" data-illuvial="RelentlessZephyrlynx" data-affinity="air" data-tier="three" data-class="fighter" onclick="addCardToDeckPreview(this)">
                       <img src="illuvial-card-img/RelentlessZephyrLynx.png">
@@ -273,42 +332,6 @@
                     <div class="card" data-src="illuvial-card-img/VirtuousZephyrlynx.png" data-illuvial="VirtuousZephyrlynx" data-affinity="air" data-tier="three" data-class="empath" onclick="addCardToDeckPreview(this)">
                       <img src="illuvial-card-img/VirtuousZephyrlynx.png">
                     </div>
-                    <div class="card" data-src="illuvial-card-img/LesserWaterDoka.png" data-illuvial="LesserWaterDoka" data-affinity="water" data-tier="one" data-class="fighter" onclick="addCardToDeckPreview(this)">
-                      <img src="illuvial-card-img/LesserWaterDoka.png">
-                    </div>
-                    <div class="card" data-src="illuvial-card-img/GreaterWaterDoka.png" data-illuvial="GreaterWaterDoka" data-affinity="water" data-tier="two" data-class="fighter" onclick="addCardToDeckPreview(this)">
-                      <img src="illuvial-card-img/GreaterWaterDoka.png">
-                    </div>
-                    <div class="card" data-src="illuvial-card-img/ExaltedWaterDoka.png" data-illuvial="ExaltedWaterDoka" data-affinity="water" data-tier="three" data-class="fighter" onclick="addCardToDeckPreview(this)">
-                      <img src="illuvial-card-img/ExaltedWaterDoka.png">
-                    </div>
-                    <div class="card" data-src="illuvial-card-img/LesserEarthDoka.png" data-illuvial="LesserEarthDoka" data-affinity="earth" data-tier="one" data-class="fighter" onclick="addCardToDeckPreview(this)">
-                      <img src="illuvial-card-img/LesserEarthDoka.png">
-                    </div>
-                    <div class="card" data-src="illuvial-card-img/GreaterEarthDoka.png" data-illuvial="GreaterEarthDoka" data-affinity="earth" data-tier="two" data-class="fighter" onclick="addCardToDeckPreview(this)">
-                      <img src="illuvial-card-img/GreaterEarthDoka.png">
-                    </div>
-                    <div class="card" data-src="illuvial-card-img/ExaltedEarthDoka.png" data-illuvial="ExaltedEarthDoka" data-affinity="earth" data-tier="three" data-class="fighter" onclick="addCardToDeckPreview(this)">
-                      <img src="illuvial-card-img/ExaltedEarthDoka.png">
-                    </div>
-                    <div class="card" data-src="illuvial-card-img/LesserFireDoka.png" data-illuvial="LesserFireDoka" data-affinity="fire" data-tier="one" data-class="fighter" onclick="addCardToDeckPreview(this)">
-                      <img src="illuvial-card-img/LesserFireDoka.png">
-                    </div>
-                    <div class="card" data-src="illuvial-card-img/GreaterFireDoka.png" data-illuvial="GreaterFireDoka" data-affinity="fire" data-tier="two" data-class="fighter" onclick="addCardToDeckPreview(this)">
-                      <img src="illuvial-card-img/GreaterFireDoka.png">
-                    </div>
-                    <div class="card" data-src="illuvial-card-img/ExaltedFireDoka.png" data-illuvial="ExaltedFireDoka" data-affinity="fire" data-tier="three" data-class="fighter" onclick="addCardToDeckPreview(this)">
-                      <img src="illuvial-card-img/ExaltedFireDoka.png">
-                    </div>
-                    <div class="card" data-src="illuvial-card-img/LesserNatureDoka.png" data-illuvial="LesserNatureDoka" data-affinity="nature" data-tier="one" data-class="fighter" onclick="addCardToDeckPreview(this)">
-                      <img src="illuvial-card-img/LesserNatureDoka.png">
-                    </div>
-                    <div class="card" data-src="illuvial-card-img/GreaterNatureDoka.png" data-illuvial="GreaterNatureDoka" data-affinity="nature" data-tier="two" data-class="fighter" onclick="addCardToDeckPreview(this)">
-                      <img src="illuvial-card-img/GreaterNatureDoka.png">
-                    </div>
-                    <div class="card" data-src="illuvial-card-img/ExaltedNatureDoka.png" data-illuvial="ExaltedNatureDoka" data-affinity="nature" data-tier="three" data-class="fighter" onclick="addCardToDeckPreview(this)">
-                      <img src="illuvial-card-img/ExaltedNatureDoka.png">
-                    </div>
                     <div class="card" data-src="illuvial-card-img/LesserAirDoka.png" data-illuvial="LesserAirDoka" data-affinity="air" data-tier="one" data-class="fighter" onclick="addCardToDeckPreview(this)">
                       <img src="illuvial-card-img/LesserAirDoka.png">
                     </div>
@@ -317,42 +340,6 @@
                     </div>
                     <div class="card" data-src="illuvial-card-img/ExaltedAirDoka.png" data-illuvial="ExaltedAirDoka" data-affinity="air" data-tier="three" data-class="fighter" onclick="addCardToDeckPreview(this)">
                       <img src="illuvial-card-img/ExaltedAirDoka.png">
-                    </div>
-                    <div class="card" data-src="illuvial-card-img/LesserWaterGrokko.png" data-illuvial="LesserWaterGrokko" data-affinity="water" data-tier="one" data-class="bulwark" onclick="addCardToDeckPreview(this)">
-                      <img src="illuvial-card-img/LesserWaterGrokko.png">
-                    </div>
-                    <div class="card" data-src="illuvial-card-img/GreaterWaterGrokko.png" data-illuvial="GreaterWaterGrokko" data-affinity="water" data-tier="two" data-class="bulwark" onclick="addCardToDeckPreview(this)">
-                      <img src="illuvial-card-img/GreaterWaterGrokko.png">
-                    </div>
-                    <div class="card" data-src="illuvial-card-img/ExaltedWaterGrokko.png" data-illuvial="ExaltedWaterGrokko" data-affinity="water" data-tier="there" data-class="bulwark" onclick="addCardToDeckPreview(this)">
-                      <img src="illuvial-card-img/ExaltedWaterGrokko.png">
-                    </div>
-                    <div class="card" data-src="illuvial-card-img/LesserEarthGrokko.png" data-illuvial="LesserEarthGrokko" data-affinity="Earth" data-tier="one" data-class="bulwark" onclick="addCardToDeckPreview(this)">
-                      <img src="illuvial-card-img/LesserEarthGrokko.png">
-                    </div>
-                    <div class="card" data-src="illuvial-card-img/GreaterEarthGrokko.png" data-illuvial="GreaterEarthGrokko" data-affinity="Earth" data-tier="two" data-class="bulwark" onclick="addCardToDeckPreview(this)">
-                      <img src="illuvial-card-img/GreaterEarthGrokko.png">
-                    </div>
-                    <div class="card" data-src="illuvial-card-img/ExaltedEarthGrokko.png" data-illuvial="ExaltedEarthGrokko" data-affinity="Earth" data-tier="three" data-class="bulwark" onclick="addCardToDeckPreview(this)">
-                      <img src="illuvial-card-img/ExaltedEarthGrokko.png">
-                    </div>
-                    <div class="card" data-src="illuvial-card-img/LesserFireGrokko.png" data-illuvial="LesserFireGrokko" data-affinity="Fire" data-tier="one" data-class="bulwark" onclick="addCardToDeckPreview(this)">
-                      <img src="illuvial-card-img/LesserFireGrokko.png">
-                    </div>
-                    <div class="card" data-src="illuvial-card-img/GreaterFireGrokko.png" data-illuvial="GreaterFireGrokko" data-affinity="Fire" data-tier="two" data-class="bulwark" onclick="addCardToDeckPreview(this)">
-                      <img src="illuvial-card-img/GreaterFireGrokko.png">
-                    </div>
-                    <div class="card" data-src="illuvial-card-img/ExaltedFireGrokko.png" data-illuvial="ExaltedFireGrokko" data-affinity="Fire" data-tier="three" data-class="bulwark" onclick="addCardToDeckPreview(this)">
-                      <img src="illuvial-card-img/ExaltedFireGrokko.png">
-                    </div>
-                    <div class="card" data-src="illuvial-card-img/LesserNatureGrokko.png" data-illuvial="LesserNatureGrokko" data-affinity="Nature" data-tier="one" data-class="bulwark" onclick="addCardToDeckPreview(this)">
-                      <img src="illuvial-card-img/LesserNatureGrokko.png">
-                    </div>
-                    <div class="card" data-src="illuvial-card-img/GreaterNatureGrokko.png" data-illuvial="GreaterNatureGrokko" data-affinity="Nature" data-tier="two" data-class="bulwark" onclick="addCardToDeckPreview(this)">
-                      <img src="illuvial-card-img/GreaterNatureGrokko.png">
-                    </div>
-                    <div class="card" data-src="illuvial-card-img/ExaltedNatureGrokko.png" data-illuvial="ExaltedNatureGrokko" data-affinity="Nature" data-tier="third" data-class="bulwark" onclick="addCardToDeckPreview(this)">
-                      <img src="illuvial-card-img/ExaltedNatureGrokko.png">
                     </div>
                     <div class="card" data-src="illuvial-card-img/LesserAirGrokko.png" data-illuvial="LesserAirGrokko" data-affinity="Air" data-tier="one" data-class="bulwark" onclick="addCardToDeckPreview(this)">
                       <img src="illuvial-card-img/LesserAirGrokko.png">
@@ -363,42 +350,6 @@
                     <div class="card" data-src="illuvial-card-img/ExaltedAirGrokko.png" data-illuvial="ExaltedAirGrokko" data-affinity="Air" data-tier="three" data-class="bulwark" onclick="addCardToDeckPreview(this)">
                       <img src="illuvial-card-img/ExaltedAirGrokko.png">
                     </div>
-                    <div class="card" data-src="illuvial-card-img/LesserWaterVolante.png" data-illuvial="LesserWaterVolante" data-affinity="Water" data-tier="one" data-class="rogue" onclick="addCardToDeckPreview(this)">
-                      <img src="illuvial-card-img/LesserWaterVolante.png">
-                    </div>
-                    <div class="card" data-src="illuvial-card-img/GreaterWaterVolante.png" data-illuvial="GreaterWaterVolante" data-affinity="Water" data-tier="two" data-class="rogue" onclick="addCardToDeckPreview(this)">
-                      <img src="illuvial-card-img/GreaterWaterVolante.png">
-                    </div>
-                    <div class="card" data-src="illuvial-card-img/ExaltedWaterVolante.png" data-illuvial="ExaltedWaterVolante" data-affinity="Water" data-tier="three" data-class="rogue" onclick="addCardToDeckPreview(this)">
-                      <img src="illuvial-card-img/ExaltedWaterVolante.png">
-                    </div>
-                    <div class="card" data-src="illuvial-card-img/LesserEarthVolante.png" data-illuvial="LesserEarthVolante" data-affinity="Earth" data-tier="one" data-class="rogue" onclick="addCardToDeckPreview(this)">
-                      <img src="illuvial-card-img/LesserEarthVolante.png">
-                    </div>
-                    <div class="card" data-src="illuvial-card-img/GreaterEarthVolante.png" data-illuvial="GreaterEarthVolante" data-affinity="Earth" data-tier="two" data-class="rogue" onclick="addCardToDeckPreview(this)">
-                      <img src="illuvial-card-img/GreaterEarthVolante.png">
-                    </div>
-                    <div class="card" data-src="illuvial-card-img/ExaltedEarthVolante.png" data-illuvial="ExaltedEarthVolante" data-affinity="Earth" data-tier="three" data-class="rogue" onclick="addCardToDeckPreview(this)">
-                      <img src="illuvial-card-img/ExaltedEarthVolante.png">
-                    </div>
-                    <div class="card" data-src="illuvial-card-img/LesserFireVolante.png" data-illuvial="LesserFireVolante" data-affinity="Fire" data-tier="one" data-class="rogue" onclick="addCardToDeckPreview(this)">
-                      <img src="illuvial-card-img/LesserFireVolante.png">
-                    </div>
-                    <div class="card" data-src="illuvial-card-img/GreaterFireVolante.png" data-illuvial="GreaterFireVolante" data-affinity="Fire" data-tier="two" data-class="rogue" onclick="addCardToDeckPreview(this)">
-                      <img src="illuvial-card-img/GreaterFireVolante.png">
-                    </div>
-                    <div class="card" data-src="illuvial-card-img/ExaltedFireVolante.png" data-illuvial="ExaltedFireVolante" data-affinity="Fire" data-tier="three" data-class="rogue" onclick="addCardToDeckPreview(this)">
-                      <img src="illuvial-card-img/ExaltedFireVolante.png">
-                    </div>
-                    <div class="card" data-src="illuvial-card-img/LesserNatureVolante.png" data-illuvial="LesserNatureVolante" data-affinity="Nature" data-tier="one" data-class="rogue" onclick="addCardToDeckPreview(this)">
-                      <img src="illuvial-card-img/LesserNatureVolante.png">
-                    </div>
-                    <div class="card" data-src="illuvial-card-img/GreaterNatureVolante.png" data-illuvial="GreaterNatureVolante" data-affinity="Nature" data-tier="two" data-class="rogue" onclick="addCardToDeckPreview(this)">
-                      <img src="illuvial-card-img/GreaterNatureVolante.png">
-                    </div>
-                    <div class="card" data-src="illuvial-card-img/ExaltedNatureVolante.png" data-illuvial="ExaltedNatureVolante" data-affinity="Nature" data-tier="three" data-class="rogue" onclick="addCardToDeckPreview(this)">
-                      <img src="illuvial-card-img/ExaltedNatureVolante.png">
-                    </div>
                     <div class="card" data-src="illuvial-card-img/LesserAirVolante.png" data-illuvial="LesserAirVolante" data-affinity="Air" data-tier="one" data-class="rogue" onclick="addCardToDeckPreview(this)">
                       <img src="illuvial-card-img/LesserAirVolante.png">
                     </div>
@@ -407,42 +358,6 @@
                     </div>
                     <div class="card" data-src="illuvial-card-img/ExaltedAirVolante.png" data-illuvial="ExaltedAirVolante" data-affinity="Air" data-tier="three" data-class="rogue" onclick="addCardToDeckPreview(this)">
                       <img src="illuvial-card-img/ExaltedAirVolante.png">
-                    </div>
-                    <div class="card" data-src="illuvial-card-img/LesserWaterFliish.png" data-illuvial="LesserWaterFliish" data-affinity="Water" data-tier="one" data-class="Psion" onclick="addCardToDeckPreview(this)">
-                      <img src="illuvial-card-img/LesserWaterFliish.png">
-                    </div>
-                    <div class="card" data-src="illuvial-card-img/GreaterWaterfliish.png" data-illuvial="GreaterWaterFliish" data-affinity="Water" data-tier="two" data-class="Psion" onclick="addCardToDeckPreview(this)">
-                      <img src="illuvial-card-img/GreaterWaterFliish.png">
-                    </div>
-                    <div class="card" data-src="illuvial-card-img/ExaltedWaterFliish.png" data-illuvial="ExaltedWaterFLiish" data-affinity="Water" data-tier="three" data-class="Psion" onclick="addCardToDeckPreview(this)">
-                      <img src="illuvial-card-img/ExaltedWaterFliish.png">
-                    </div>
-                    <div class="card" data-src="illuvial-card-img/LesserEarthFliish.png" data-illuvial="LesserEarthFliish" data-affinity="Earth" data-tier="one" data-class="Psion" onclick="addCardToDeckPreview(this)">
-                      <img src="illuvial-card-img/LesserEarthFliish.png">
-                    </div>
-                    <div class="card" data-src="illuvial-card-img/GreaterEarthFliish.png" data-illuvial="GreaterEarthFliish" data-affinity="Earth" data-tier="two" data-class="Psion" onclick="addCardToDeckPreview(this)">
-                      <img src="illuvial-card-img/GreaterEarthFliish.png">
-                    </div>
-                    <div class="card" data-src="illuvial-card-img/ExaltedEarthFliish.png" data-illuvial="ExaltedEarthFliish" data-affinity="Earth" data-tier="three" data-class="Psion" onclick="addCardToDeckPreview(this)">
-                      <img src="illuvial-card-img/ExaltedEarthFliish.png">
-                    </div>
-                    <div class="card" data-src="illuvial-card-img/LesserFireFliish.png" data-illuvial="LesserFireFliish" data-affinity="Fire" data-tier="one" data-class="Psion" onclick="addCardToDeckPreview(this)">
-                      <img src="illuvial-card-img/LesserFireFliish.png">
-                    </div>
-                    <div class="card" data-src="illuvial-card-img/GreaterFireFliish.png" data-illuvial="GreaterFireFliish" data-affinity="Fire" data-tier="two" data-class="Psion" onclick="addCardToDeckPreview(this)">
-                      <img src="illuvial-card-img/GreaterFireFliish.png">
-                    </div>
-                    <div class="card" data-src="illuvial-card-img/ExaltedFireFliish.png" data-illuvial="ExaltedFireFliish" data-affinity="Fire" data-tier="three" data-class="Psion" onclick="addCardToDeckPreview(this)">
-                      <img src="illuvial-card-img/ExaltedFireFliish.png">
-                    </div>
-                    <div class="card" data-src="illuvial-card-img/LesserNatureFliish.png" data-illuvial="LesserNatureFliish" data-affinity="Nature" data-tier="one" data-class="Psion" onclick="addCardToDeckPreview(this)">
-                      <img src="illuvial-card-img/LesserNatureFliish.png">
-                    </div>
-                    <div class="card" data-src="illuvial-card-img/GreaterNatureFliish.png" data-illuvial="GreaterNatureFliish" data-affinity="Nature" data-tier="two" data-class="Psion" onclick="addCardToDeckPreview(this)">
-                      <img src="illuvial-card-img/GreaterNatureFliish.png">
-                    </div>
-                    <div class="card" data-src="illuvial-card-img/ExaltedNatureFliish.png" data-illuvial="ExaltedNatureFliish" data-affinity="Nature" data-tier="three" data-class="Psion" onclick="addCardToDeckPreview(this)">
-                      <img src="illuvial-card-img/ExaltedNatureFliish.png">
                     </div>
                     <div class="card" data-src="illuvial-card-img/LesserAirFliish.png" data-illuvial="LesserAirFliish" data-affinity="Air" data-tier="one" data-class="Psion" onclick="addCardToDeckPreview(this)">
                       <img src="illuvial-card-img/LesserAirFliish.png">
@@ -453,14 +368,93 @@
                     <div class="card" data-src="illuvial-card-img/ExaltedAirFliish.png" data-illuvial="ExaltedAirFliish" data-affinity="Air" data-tier="three" data-class="Psion" onclick="addCardToDeckPreview(this)">
                       <img src="illuvial-card-img/ExaltedAirFliish.png">
                     </div>
-                    <div class="card" data-src="illuvial-card-img/LesserWaterAtippo.png" data-illuvial="LesserWaterAtippo" data-affinity="Water" data-tier="one" data-class="empath" onclick="addCardToDeckPreview(this)">
-                      <img src="illuvial-card-img/LesserWaterAtippo.png">
+                    <div class="card" data-src="illuvial-card-img/LesserAirAtippo.png" data-illuvial="LesserAirAtippo" data-affinity="Air" data-tier="one" data-class="empath" onclick="addCardToDeckPreview(this)">
+                      <img src="illuvial-card-img/LesserAirAtippo.png">
                     </div>
-                    <div class="card" data-src="illuvial-card-img/GreaterWaterAtippo.png" data-illuvial="GreaterWaterAtippo" data-affinity="Water" data-tier="two" data-class="empath" onclick="addCardToDeckPreview(this)">
-                      <img src="illuvial-card-img/GreaterWaterAtippo.png">
+                    <div class="card" data-src="illuvial-card-img/GreaterAirAtippo.png" data-illuvial="GreaterAirAtippo" data-affinity="Air" data-tier="two" data-class="empath" onclick="addCardToDeckPreview(this)">
+                      <img src="illuvial-card-img/GreaterAirAtippo.png">
                     </div>
-                    <div class="card" data-src="illuvial-card-img/ExaltedWaterAtippo.png" data-illuvial="ExaltedWaterAtippo" data-affinity="Water" data-tier="three" data-class="empath" onclick="addCardToDeckPreview(this)">
-                      <img src="illuvial-card-img/ExaltedWaterAtippo.png">
+                    <div class="card" data-src="illuvial-card-img/ExaltedAirAtippo.png" data-illuvial="ExaltedAirAtippo" data-affinity="Air" data-tier="three" data-class="empath" onclick="addCardToDeckPreview(this)">
+                      <img src="illuvial-card-img/ExaltedAirAtippo.png">
+                    </div>
+                    <div class="card" data-src="illuvial-card-img/Scarabok.png" data-illuvial="scarabok" data-affinity="earth" data-tier="one" data-class="bulwark" onclick="addCardToDeckPreview(this)">
+                      <img src="illuvial-card-img/Scarabok.png">
+                    </div>
+                    <div class="card" data-src="illuvial-card-img/Goliant.png" data-illuvial="goliant" data-affinity="granite" data-tier="two" data-class="bulwark" onclick="addCardToDeckPreview(this)">
+                      <img src="illuvial-card-img/Goliant.png">
+                    </div>
+                    <div class="card" data-src="illuvial-card-img/Titanor.png" data-illuvial="titanor" data-affinity="granite" data-tier="three" data-class="collossus" onclick="addCardToDeckPreview(this)">
+                      <img src="illuvial-card-img/Titanor.png">
+                    </div>
+
+                    <div class="card" data-src="illuvial-card-img/Lura.png" data-illuvial="lura" data-affinity="earth" data-tier="one" data-class="rogue" onclick="addCardToDeckPreview(this)">
+                      <img src="illuvial-card-img/Lura.png">
+                    </div>
+                    <div class="card" data-src="illuvial-card-img/Loulura.png" data-illuvial="loulura" data-affinity="bloom" data-tier="two" data-class="rogue" onclick="addCardToDeckPreview(this)">
+                      <img src="illuvial-card-img/Loulura.png">
+                    </div>
+                    <div class="card" data-src="illuvial-card-img/Malura.png" data-illuvial="malura" data-affinity="bloom" data-tier="three" data-class="vanguard" onclick="addCardToDeckPreview(this)">
+                      <img src="illuvial-card-img/Malura.png">
+                    </div>
+                    <div class="card" data-src="illuvial-card-img/Tatopee.png" data-illuvial="tatopee" data-affinity="earth" data-tier="one" data-class="psion" onclick="addCardToDeckPreview(this)">
+                      <img src="illuvial-card-img/Tatopee.png">
+                    </div>
+                    <div class="card" data-src="illuvial-card-img/Teeantee.png" data-illuvial="teeantee" data-affinity="granite" data-tier="two" data-class="psion" onclick="addCardToDeckPreview(this)">
+                      <img src="illuvial-card-img/Teeantee.png">
+                    </div>
+                    <div class="card" data-src="illuvial-card-img/Seeforus.png" data-illuvial="seeforus" data-affinity="granite" data-tier="three" data-class="psion" onclick="addCardToDeckPreview(this)">
+                      <img src="illuvial-card-img/Seeforus.png">
+                    </div>
+                    <div class="card" data-src="illuvial-card-img/RelentlessTerralynx.png" data-illuvial="RelentlessTerralynx" data-affinity="earth" data-tier="three" data-class="fighter" onclick="addCardToDeckPreview(this)">
+                      <img src="illuvial-card-img/RelentlessTerralynx.png">
+                    </div>
+                    <div class="card" data-src="illuvial-card-img/NimbleTerralynx.png" data-illuvial="NimbleTerralynx" data-affinity="earth" data-tier="three" data-class="rogue" onclick="addCardToDeckPreview(this)">
+                      <img src="illuvial-card-img/NimbleTerralynx.png">
+                    </div>
+                    <div class="card" data-src="illuvial-card-img/StoicTerralynx.png" data-illuvial="StoicTerralynx" data-affinity="earth" data-tier="three" data-class="bulwark" onclick="addCardToDeckPreview(this)">
+                      <img src="illuvial-card-img/StoicTerralynx.png">
+                    </div>
+                    <div class="card" data-src="illuvial-card-img/ArcaneTerralynx.png" data-illuvial="ArcaneTerralynx" data-affinity="earth" data-tier="three" data-class="psion" onclick="addCardToDeckPreview(this)">
+                      <img src="illuvial-card-img/ArcaneTerralynx.png">
+                    </div>
+                    <div class="card" data-src="illuvial-card-img/VirtuousTerralynx.png" data-illuvial="VirtuousTerralynx" data-affinity="earth" data-tier="three" data-class="empath" onclick="addCardToDeckPreview(this)">
+                      <img src="illuvial-card-img/VirtuousTerralynx.png">
+                    </div>
+                    <div class="card" data-src="illuvial-card-img/LesserEarthDoka.png" data-illuvial="LesserEarthDoka" data-affinity="earth" data-tier="one" data-class="fighter" onclick="addCardToDeckPreview(this)">
+                      <img src="illuvial-card-img/LesserEarthDoka.png">
+                    </div>
+                    <div class="card" data-src="illuvial-card-img/GreaterEarthDoka.png" data-illuvial="GreaterEarthDoka" data-affinity="earth" data-tier="two" data-class="fighter" onclick="addCardToDeckPreview(this)">
+                      <img src="illuvial-card-img/GreaterEarthDoka.png">
+                    </div>
+                    <div class="card" data-src="illuvial-card-img/ExaltedEarthDoka.png" data-illuvial="ExaltedEarthDoka" data-affinity="earth" data-tier="three" data-class="fighter" onclick="addCardToDeckPreview(this)">
+                      <img src="illuvial-card-img/ExaltedEarthDoka.png">
+                    </div>
+                    <div class="card" data-src="illuvial-card-img/LesserEarthGrokko.png" data-illuvial="LesserEarthGrokko" data-affinity="Earth" data-tier="one" data-class="bulwark" onclick="addCardToDeckPreview(this)">
+                      <img src="illuvial-card-img/LesserEarthGrokko.png">
+                    </div>
+                    <div class="card" data-src="illuvial-card-img/GreaterEarthGrokko.png" data-illuvial="GreaterEarthGrokko" data-affinity="Earth" data-tier="two" data-class="bulwark" onclick="addCardToDeckPreview(this)">
+                      <img src="illuvial-card-img/GreaterEarthGrokko.png">
+                    </div>
+                    <div class="card" data-src="illuvial-card-img/ExaltedEarthGrokko.png" data-illuvial="ExaltedEarthGrokko" data-affinity="Earth" data-tier="three" data-class="bulwark" onclick="addCardToDeckPreview(this)">
+                      <img src="illuvial-card-img/ExaltedEarthGrokko.png">
+                    </div>
+                    <div class="card" data-src="illuvial-card-img/LesserEarthVolante.png" data-illuvial="LesserEarthVolante" data-affinity="Earth" data-tier="one" data-class="rogue" onclick="addCardToDeckPreview(this)">
+                      <img src="illuvial-card-img/LesserEarthVolante.png">
+                    </div>
+                    <div class="card" data-src="illuvial-card-img/GreaterEarthVolante.png" data-illuvial="GreaterEarthVolante" data-affinity="Earth" data-tier="two" data-class="rogue" onclick="addCardToDeckPreview(this)">
+                      <img src="illuvial-card-img/GreaterEarthVolante.png">
+                    </div>
+                    <div class="card" data-src="illuvial-card-img/ExaltedEarthVolante.png" data-illuvial="ExaltedEarthVolante" data-affinity="Earth" data-tier="three" data-class="rogue" onclick="addCardToDeckPreview(this)">
+                      <img src="illuvial-card-img/ExaltedEarthVolante.png">
+                    </div>
+                    <div class="card" data-src="illuvial-card-img/LesserEarthFliish.png" data-illuvial="LesserEarthFliish" data-affinity="Earth" data-tier="one" data-class="Psion" onclick="addCardToDeckPreview(this)">
+                      <img src="illuvial-card-img/LesserEarthFliish.png">
+                    </div>
+                    <div class="card" data-src="illuvial-card-img/GreaterEarthFliish.png" data-illuvial="GreaterEarthFliish" data-affinity="Earth" data-tier="two" data-class="Psion" onclick="addCardToDeckPreview(this)">
+                      <img src="illuvial-card-img/GreaterEarthFliish.png">
+                    </div>
+                    <div class="card" data-src="illuvial-card-img/ExaltedEarthFliish.png" data-illuvial="ExaltedEarthFliish" data-affinity="Earth" data-tier="three" data-class="Psion" onclick="addCardToDeckPreview(this)">
+                      <img src="illuvial-card-img/ExaltedEarthFliish.png">
                     </div>
                     <div class="card" data-src="illuvial-card-img/LesserEarthAtippo.png" data-illuvial="LesserEarthAtippo" data-affinity="Earth" data-tier="one" data-class="empath" onclick="addCardToDeckPreview(this)">
                       <img src="illuvial-card-img/LesserEarthAtippo.png">
@@ -470,33 +464,6 @@
                     </div>
                     <div class="card" data-src="illuvial-card-img/ExaltedEarthAtippo.png" data-illuvial="ExaltedEarthAtippo" data-affinity="Earth" data-tier="three" data-class="empath" onclick="addCardToDeckPreview(this)">
                       <img src="illuvial-card-img/ExaltedEarthAtippo.png">
-                    </div>
-                    <div class="card" data-src="illuvial-card-img/LesserFireAtippo.png" data-illuvial="LesserFireAtippo" data-affinity="Fire" data-tier="one" data-class="empath" onclick="addCardToDeckPreview(this)">
-                      <img src="illuvial-card-img/LesserFireAtippo.png">
-                    </div>
-                    <div class="card" data-src="illuvial-card-img/GreaterFireAtippo.png" data-illuvial="GreaterFireAtippo" data-affinity="Fire" data-tier="two" data-class="empath" onclick="addCardToDeckPreview(this)">
-                      <img src="illuvial-card-img/GreaterFireAtippo.png">
-                    </div>
-                    <div class="card" data-src="illuvial-card-img/ExaltedFireAtippo.png" data-illuvial="ExaltedFireAtippo" data-affinity="Fire" data-tier="three" data-class="empath" onclick="addCardToDeckPreview(this)">
-                      <img src="illuvial-card-img/ExaltedFireAtippo.png">
-                    </div>
-                    <div class="card" data-src="illuvial-card-img/LesserNatureAtippo.png" data-illuvial="LesserNatureAtippo" data-affinity="Nature" data-tier="one" data-class="empath" onclick="addCardToDeckPreview(this)">
-                      <img src="illuvial-card-img/LesserNatureAtippo.png">
-                    </div>
-                    <div class="card" data-src="illuvial-card-img/GreaterNatureAtippo.png" data-illuvial="GreaterNatureAtippo" data-affinity="Nature" data-tier="two" data-class="empath" onclick="addCardToDeckPreview(this)">
-                      <img src="illuvial-card-img/GreaterNatureAtippo.png">
-                    </div>
-                    <div class="card" data-src="illuvial-card-img/ExaltedNatureAtippo.png" data-illuvial="ExaltedNatureAtippo" data-affinity="Nature" data-tier="three" data-class="empath" onclick="addCardToDeckPreview(this)">
-                      <img src="illuvial-card-img/ExaltedNatureAtippo.png">
-                    </div>
-                    <div class="card" data-src="illuvial-card-img/LesserAirAtippo.png" data-illuvial="LesserAirAtippo" data-affinity="Air" data-tier="one" data-class="empath" onclick="addCardToDeckPreview(this)">
-                      <img src="illuvial-card-img/LesserAirAtippo.png">
-                    </div>
-                    <div class="card" data-src="illuvial-card-img/GreaterAirAtippo.png" data-illuvial="GreaterAirAtippo" data-affinity="Air" data-tier="two" data-class="empath" onclick="addCardToDeckPreview(this)">
-                      <img src="illuvial-card-img/GreaterAirAtippo.png">
-                    </div>
-                    <div class="card" data-src="illuvial-card-img/ExaltedAirAtippo.png" data-illuvial="ExaltedAirAtippo" data-affinity="Air" data-tier="three" data-class="empath" onclick="addCardToDeckPreview(this)">
-                      <img src="illuvial-card-img/ExaltedAirAtippo.png">
                     </div>
                     <div class="card" data-src="illuvial-card-img/Squizz.png" data-illuvial="Squizz" data-affinity="Shock" data-tier="one" data-class="Psion" onclick="addCardToDeckPreview(this)">
                       <img src="illuvial-card-img/Squizz.png">
@@ -512,9 +479,8 @@
                     </div> -->
                     <!-- Repeat for each card -->
                   </div>
-                  <div class="filtered-card-grid">
+                  <hr id="cs-line">
 
-                  </div>
           </section>
           <section class="deck-preview">
             <h2>Your Selected Cards:</h2>
@@ -526,24 +492,35 @@
           <section class="deck-grading">
             <div class="deck-grading">
               <h2>Deck Evaluation:</h2>
+              <!-- Add the grade score bars -->
+              <div id="grading-score-section" class="flex-container">
+                <!-- affinity-balance-bar -->
+                <div class="grade-bar" id="bar1">
+                </div>
+                <!--class-balance-bar -->
+                <div class="grade-bar" id="bar2">
+                </div>
+              </div>
               <!-- <h3>How to Use:</h3> -->
               <div class="flex-container">
                 <div id = "strengths-section">
-                  <h3>Strengths:</h3>
+                  <h3>Strong Against:</h3>
                   <ul id="deck-strengths">
                     <!-- Add the strengths of the deck here -->
                   </ul>
                 </div>
                 <div id="weaknesses-section">
-                  <h3>Weaknesses:</h3>
+                  <h3>Weak Against:</h3>
                   <ul id="deck-weaknesses">
                     <!-- Add the weaknesses of the deck here -->
                   </ul>
                 </div>
-              </div>
-                <h3>Suggestions:</h3>
+              <div id="deck-suggestion">
+                <h3>Add to Fix Weakness:</h3>
                 <ul id="deck-suggestions" ><!-- Add the weaknesses of the deck here -->
                 </ul>
+              </div>
+              </div>
               </div> 
           </section>
             <script src="grading.js"></script>
